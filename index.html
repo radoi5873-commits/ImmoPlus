@@ -1,0 +1,2706 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bénin Prestige Immobilier | Immobilier de Luxe & Terrains Sécurisés</title>
+    <!-- Meta SEO -->
+    <meta name="description" content="Découvrez Bénin Prestige Immobilier. Vente de villas de luxe, appartements meublés et terrains sécurisés avec Titre Foncier (TF) à Cotonou, Calavi, Ouidah et Porto-Novo.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            gold: '#C5A028',
+                            goldHover: '#B49018',
+                            emerald: '#047857',
+                            emeraldDark: '#064E3B',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        title: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Theme Check -->
+    <script>
+        if (localStorage.getItem('immo-theme') === 'dark' || (!('immo-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS Styles -->
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #060B13;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #1E293B;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C5A028;
+        }
+
+        /* Gold Gradient */
+        .gold-gradient {
+            background: linear-gradient(135deg, #F59E0B 0%, #C5A028 50%, #B45309 100%);
+        }
+
+        /* Pulse gold effect */
+        .pulse-gold {
+            box-shadow: 0 0 0 0 rgba(197, 160, 40, 0.4);
+            animation: pulse 2s infinite;
+        }
+        .pulse-green {
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+            animation: pulse-g 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(197, 160, 40, 0.4); }
+            70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(197, 160, 40, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(197, 160, 40, 0); }
+        }
+        @keyframes pulse-g {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        /* Preloader spinner */
+        .loader-spin {
+            border: 3px solid rgba(197, 160, 40, 0.2);
+            border-top: 3px solid #C5A028;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* FAQ Transition */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        .faq-active .faq-answer {
+            max-height: 200px;
+            padding-top: 12px;
+        }
+
+        /* PRINT STYLES - Luxury Property Brochure */
+        @media print {
+            body {
+                background: white !important;
+                color: #0F172A !important;
+                font-size: 12px !important;
+            }
+            /* Hide page wrappers & scroll elements */
+            body > *:not(#modal-details) {
+                display: none !important;
+            }
+            #modal-details {
+                position: static !important;
+                display: block !important;
+                background: white !important;
+                box-shadow: none !important;
+                border: none !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: visible !important;
+            }
+            /* Hide modal close button, thumbnail carousels, action links, and contact forms */
+            #modal-details button,
+            #modal-details form,
+            #modal-details a,
+            #modal-details .modal-thumb,
+            #modal-details hr {
+                display: none !important;
+            }
+            /* Page margins and print styling */
+            @page {
+                size: A4;
+                margin: 1.5cm;
+            }
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-[#060B13] text-slate-800 dark:text-slate-100 font-sans min-h-screen flex flex-col transition-colors duration-300">
+
+    <!-- PRELOADER -->
+    <div id="preloader" class="fixed inset-0 z-50 bg-[#FAFBFD] dark:bg-[#060B13] flex flex-col items-center justify-center transition-opacity duration-500">
+        <div class="loader-spin mb-4"></div>
+        <h2 class="text-2xl font-title font-bold gold-gradient bg-clip-text text-transparent tracking-widest">BÉNIN PRESTIGE</h2>
+        <p class="text-xs text-slate-500 dark:text-slate-450 mt-2 font-light">Chargement de l'excellence immobilière...</p>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast-container" class="fixed top-24 right-4 z-50 flex flex-col gap-2 max-w-md w-full pointer-events-none"></div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="sticky top-0 z-40 bg-white/90 dark:bg-[#060B13]/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-900 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 cursor-pointer group" onclick="navigateTab('explore')">
+                    <div class="bg-gradient-to-tr from-emerald-600 to-amber-500 p-2.5 rounded-xl shadow-lg shadow-emerald-950/10 group-hover:rotate-6 transition-transform">
+                        <i data-lucide="building-2" class="h-6 w-6 text-white"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold font-title tracking-tight text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                            BÉNIN PRESTIGE
+                        </span>
+                        <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold tracking-wider -mt-1 uppercase">Immobilier d'élite</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center space-x-4 lg:space-x-6 text-xs lg:text-[13px]">
+                    <button id="nav-btn-explore" onclick="navigateTab('explore')" class="nav-link text-amber-600 dark:text-amber-400 font-semibold border-b-2 border-amber-600 dark:border-amber-400 pb-1 px-1 transition-all">Découvrir</button>
+                    <button id="nav-btn-guide" onclick="navigateTab('guide')" class="nav-link text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-medium border-b-2 border-transparent hover:border-slate-300 dark:hover:border-slate-700 pb-1 px-1 transition-all">Guide d'Achat 🇧🇯</button>
+                    <button id="nav-btn-calculator" onclick="navigateTab('calculator')" class="nav-link text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-medium border-b-2 border-transparent hover:border-slate-300 dark:hover:border-slate-700 pb-1 px-1 transition-all">Simulateur de Prêt</button>
+                    <button id="nav-btn-estimation" onclick="navigateTab('estimation')" class="nav-link text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-medium border-b-2 border-transparent hover:border-slate-300 dark:hover:border-slate-700 pb-1 px-1 transition-all">Estimer mon Bien</button>
+                    <button id="nav-btn-favorites" onclick="navigateTab('favorites')" class="nav-link relative text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-medium border-b-2 border-transparent pb-1 px-1 transition-colors flex items-center space-x-1">
+                        <i data-lucide="heart" class="h-3.5 w-3.5"></i>
+                        <span>Favoris</span>
+                        <span id="fav-badge" class="absolute -top-3.5 -right-4 bg-amber-500 text-slate-950 text-[10px] font-extrabold px-1.5 py-0.5 rounded-full hidden">0</span>
+                    </button>
+                </div>
+
+                <!-- Actions & Control Pill Group -->
+                <div class="flex items-center space-x-2">
+                    <!-- Control Pill -->
+                    <div class="flex items-center bg-slate-100/80 dark:bg-[#0E1524]/80 border border-slate-200/50 dark:border-slate-800/80 px-2.5 py-1.5 rounded-2xl">
+                        <!-- Currency Switcher -->
+                        <select onchange="changeCurrency(this.value)" class="bg-transparent border-0 text-[10px] sm:text-xs font-bold text-slate-750 dark:text-slate-250 focus:outline-none cursor-pointer pr-1">
+                            <option value="XOF" class="bg-white dark:bg-[#0E1524]">FCFA</option>
+                            <option value="EUR" class="bg-white dark:bg-[#0E1524]">EUR (€)</option>
+                            <option value="USD" class="bg-white dark:bg-[#0E1524]">USD ($)</option>
+                        </select>
+                        <span class="h-3.5 w-px bg-slate-200 dark:bg-slate-800 mx-1.5"></span>
+                        <!-- Theme Toggle Button -->
+                        <button onclick="toggleTheme()" class="text-slate-550 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" title="Changer le thème">
+                            <i id="theme-icon" data-lucide="moon" class="h-4 w-4"></i>
+                        </button>
+                    </div>
+
+                    <!-- Espace Pro Button -->
+                    <button onclick="openAgentAuth()" class="pulse-gold bg-slate-900 hover:bg-slate-850 dark:bg-gradient-to-r dark:from-amber-500 dark:to-amber-600 dark:hover:from-amber-600 dark:hover:to-amber-700 text-white dark:text-slate-950 px-3 sm:px-4 py-2 sm:py-2.5 rounded-2xl font-bold text-[11px] sm:text-xs transition shadow-sm flex items-center space-x-1.5 shrink-0">
+                        <i data-lucide="shield-check" class="h-4 w-4 shrink-0"></i>
+                        <span class="hidden sm:inline">Espace Pro</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Appears only on Explore/Home Tab) -->
+    <header id="hero-section" class="relative bg-[#0B1528] py-28 px-4 overflow-hidden border-b border-slate-900 text-white">
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 z-0 opacity-25 bg-cover bg-center"
+            style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80');">
+        </div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-45 -left-40 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
+            <!-- Benin Flag Accent Badge -->
+            <div class="inline-flex items-center space-x-2 bg-slate-950/80 border border-slate-800 rounded-full px-4 py-1.5 mb-6 shadow-inner">
+                <span class="flex space-x-0.5 h-3 w-5 rounded overflow-hidden">
+                    <span class="bg-emerald-600 w-1/3 h-full"></span>
+                    <span class="bg-amber-400 w-1/3 h-full"></span>
+                    <span class="bg-red-600 w-1/3 h-full"></span>
+                </span>
+                <span class="text-[10px] sm:text-xs font-semibold text-slate-300 uppercase tracking-widest">Transactions 100% sécurisées au Bénin</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black font-title tracking-tight mb-6">
+                L'Immobilier d'Exception au <span class="bg-gradient-to-r from-emerald-400 via-amber-400 to-amber-500 bg-clip-text text-transparent">Bénin</span>
+            </h1>
+            <p class="text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Villas prestigieuses à la Haie Vive, duplex meublés en front de mer à Fidjrossè et parcelles titrées prêtes pour construction avec validation légale garantie.
+            </p>
+
+            <!-- TABS FOR QUICK CATEGORY -->
+            <div class="max-w-4xl mx-auto bg-white/95 dark:bg-slate-900/95 p-2 rounded-2xl border border-slate-200/50 dark:border-slate-850 shadow-2xl text-slate-800 dark:text-white">
+                <div class="flex flex-col md:flex-row gap-2">
+                    <!-- Search Input -->
+                    <div class="flex-grow flex items-center bg-slate-50 dark:bg-slate-950 rounded-xl px-4 py-3 border border-slate-200 dark:border-slate-800 focus-within:border-amber-500 dark:focus-within:border-amber-400/50 transition">
+                        <i data-lucide="search" class="text-slate-400 mr-3 h-5 w-5"></i>
+                        <input type="text" id="search-keyword" placeholder="Rechercher par quartier ou mot-clé (ex: Haie Vive, piscine)..."
+                            class="w-full bg-transparent focus:outline-none text-sm text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500">
+                    </div>
+
+                    <!-- Filter Selects inside Hero -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                        <!-- Ville -->
+                        <div class="flex items-center bg-slate-50 dark:bg-slate-950 rounded-xl px-3 py-3 border border-slate-200 dark:border-slate-800">
+                            <i data-lucide="map-pin" class="text-emerald-600 dark:text-emerald-500 mr-2 h-4 w-4 shrink-0"></i>
+                            <select id="hero-city" onchange="updateDistrictOptions(); filterProperties();" class="w-full bg-transparent text-xs text-slate-800 dark:text-slate-200 focus:outline-none cursor-pointer">
+                                <option value="" class="bg-white dark:bg-slate-950">Toutes Villes</option>
+                                <option value="Cotonou" class="bg-white dark:bg-slate-950">Cotonou</option>
+                                <option value="Abomey-Calavi" class="bg-white dark:bg-slate-950">Abomey-Calavi</option>
+                                <option value="Ouidah" class="bg-white dark:bg-slate-950">Ouidah</option>
+                                <option value="Porto-Novo" class="bg-white dark:bg-slate-950">Porto-Novo</option>
+                            </select>
+                        </div>
+
+                        <!-- Type -->
+                        <div class="flex items-center bg-slate-50 dark:bg-slate-950 rounded-xl px-3 py-3 border border-slate-200 dark:border-slate-800">
+                            <i data-lucide="home" class="text-amber-600 dark:text-amber-500 mr-2 h-4 w-4 shrink-0"></i>
+                            <select id="hero-type" onchange="filterProperties()" class="w-full bg-transparent text-xs text-slate-800 dark:text-slate-200 focus:outline-none cursor-pointer">
+                                <option value="" class="bg-white dark:bg-slate-950">Tous Types</option>
+                                <option value="villa" class="bg-white dark:bg-slate-950">Villa</option>
+                                <option value="appartement" class="bg-white dark:bg-slate-950">Appartement</option>
+                                <option value="terrain" class="bg-white dark:bg-slate-950">Terrain / Parcelle</option>
+                                <option value="bureau" class="bg-white dark:bg-slate-950">Bureau / Commerce</option>
+                            </select>
+                        </div>
+
+                        <!-- Budget Max -->
+                        <div class="flex items-center bg-slate-50 dark:bg-slate-950 rounded-xl px-3 py-3 border border-slate-200 dark:border-slate-800 col-span-2 md:col-span-1">
+                            <i data-lucide="wallet" class="text-amber-600 dark:text-amber-400 mr-2 h-4 w-4 shrink-0"></i>
+                            <select id="hero-budget" onchange="filterProperties()" class="w-full bg-transparent text-xs text-slate-800 dark:text-slate-200 focus:outline-none cursor-pointer">
+                                <option value="" class="bg-white dark:bg-slate-950">Budget Max</option>
+                                <option value="500000" class="bg-white dark:bg-slate-950">500 000 FCFA / mo</option>
+                                <option value="2000000" class="bg-white dark:bg-slate-950">2M FCFA / mo</option>
+                                <option value="50000000" class="bg-white dark:bg-slate-950">50M FCFA max (Achat)</option>
+                                <option value="150000000" class="bg-white dark:bg-slate-950">150M FCFA max</option>
+                                <option value="400000000" class="bg-white dark:bg-slate-950">400M FCFA max</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick filters in Hero -->
+            <div class="mt-4 flex flex-wrap justify-center gap-3 text-xs">
+                <label class="flex items-center space-x-2 bg-slate-950/60 hover:bg-slate-950/80 border border-slate-800 rounded-xl px-3.5 py-2 cursor-pointer select-none text-slate-350 hover:text-white transition-colors">
+                    <input type="checkbox" id="hero-opt-tf" onchange="syncHeroFilters('tf')" class="accent-amber-500 h-4 w-4 rounded border-slate-700 bg-slate-950">
+                    <span>Titre Foncier (TF) Obligatoire 🔒</span>
+                </label>
+                <label class="flex items-center space-x-2 bg-slate-950/60 hover:bg-slate-950/80 border border-slate-800 rounded-xl px-3.5 py-2 cursor-pointer select-none text-slate-355 hover:text-white transition-colors">
+                    <input type="checkbox" id="hero-opt-piscine" onchange="syncHeroFilters('piscine')" class="accent-amber-500 h-4 w-4 rounded border-slate-700 bg-slate-950">
+                    <span>Avec Piscine 🏊</span>
+                </label>
+                <label class="flex items-center space-x-2 bg-slate-950/60 hover:bg-slate-950/80 border border-slate-800 rounded-xl px-3.5 py-2 cursor-pointer select-none text-slate-355 hover:text-white transition-colors">
+                    <input type="checkbox" id="hero-opt-mer" onchange="syncHeroFilters('mer')" class="accent-amber-500 h-4 w-4 rounded border-slate-700 bg-slate-950">
+                    <span>Vue sur Mer 🌊</span>
+                </label>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-6 text-center border-t border-slate-850/60 mt-10">
+                <div>
+                    <p class="text-xl sm:text-2xl font-black font-title text-amber-400">100%</p>
+                    <p class="text-[10px] sm:text-xs text-slate-300 font-light mt-1">Titres Fonciers (TF) Vérifiés</p>
+                </div>
+                <div>
+                    <p class="text-xl sm:text-2xl font-black font-title text-white">+150</p>
+                    <p class="text-[10px] sm:text-xs text-slate-300 font-light mt-1">Biens Vendus & Loués</p>
+                </div>
+                <div>
+                    <p class="text-xl sm:text-2xl font-black font-title text-emerald-400">0%</p>
+                    <p class="text-[10px] sm:text-xs text-slate-300 font-light mt-1">Litiges Fonciers Garantis</p>
+                </div>
+                <div>
+                    <p class="text-xl sm:text-2xl font-black font-title text-white">24h</p>
+                    <p class="text-[10px] sm:text-xs text-slate-300 font-light mt-1">Assistance WhatsApp</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN APP WRAPPER -->
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 pb-28 md:pb-10">
+        
+        <!-- ================= TAB 1: EXPLORE ================= -->
+        <section id="tab-explore" class="tab-content block">
+            <div class="flex flex-col lg:flex-row gap-8">
+                
+                <!-- Sidebar Filters -->
+                <aside class="w-full lg:w-72 shrink-0">
+                    <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-900 rounded-3xl p-6 shadow-sm sticky top-24 transition-colors">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="font-title font-bold text-base text-slate-900 dark:text-white flex items-center">
+                                <i data-lucide="sliders-horizontal" class="h-4.5 w-4.5 text-amber-600 dark:text-amber-400 mr-2"></i>
+                                Filtres Avancés
+                            </h3>
+                            <button onclick="resetFilters()" class="text-xs text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 flex items-center transition">
+                                <i data-lucide="rotate-ccw" class="h-3 w-3 mr-1"></i> Réinitialiser
+                            </button>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Type d'offre -->
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2.5">Type d'Offre</label>
+                                <div class="grid grid-cols-3 gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200/50 dark:border-slate-850">
+                                    <button onclick="setOfferFilter('all')" id="btn-offer-all" class="offer-tab-btn py-1.5 px-2 rounded-lg text-xs font-semibold bg-amber-500 text-slate-950 transition-all">Tous</button>
+                                    <button onclick="setOfferFilter('achat')" id="btn-offer-achat" class="offer-tab-btn py-1.5 px-2 rounded-lg text-xs font-semibold text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">Achat</button>
+                                    <button onclick="setOfferFilter('location')" id="btn-offer-location" class="offer-tab-btn py-1.5 px-2 rounded-lg text-xs font-semibold text-slate-655 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">Louer</button>
+                                </div>
+                            </div>
+
+                            <!-- Quartier dynamique -->
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Zone / Quartier</label>
+                                <select id="filter-district" onchange="filterProperties()" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2.5 text-sm focus:border-amber-500 dark:focus:border-amber-400/50 text-slate-800 dark:text-slate-200 outline-none cursor-pointer">
+                                    <option value="">Sélectionnez un quartier</option>
+                                    <!-- Rempli en JS -->
+                                </select>
+                            </div>
+
+                            <!-- Budget Minimum et Maximum -->
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Budget (FCFA)</label>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <input type="number" id="filter-budget-min" placeholder="Min" oninput="filterProperties()"
+                                        class="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs w-full text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-655 focus:outline-none focus:border-amber-500">
+                                    <input type="number" id="filter-budget-max" placeholder="Max" oninput="filterProperties()"
+                                        class="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs w-full text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-655 focus:outline-none focus:border-amber-500">
+                                </div>
+                            </div>
+
+                            <!-- Éléments Spécifiques -->
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2.5">Critères Spécifiques</label>
+                                <div class="space-y-2.5">
+                                    <label class="flex items-center space-x-2.5 cursor-pointer group">
+                                        <input type="checkbox" id="feat-tf" onchange="filterProperties()" class="rounded border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-amber-500 focus:ring-amber-500/50 h-4 w-4">
+                                        <span class="text-xs text-slate-600 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white transition-colors">Titre Foncier (TF)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2.5 cursor-pointer group">
+                                        <input type="checkbox" id="feat-piscine" onchange="filterProperties()" class="rounded border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-amber-500 focus:ring-amber-500/50 h-4 w-4">
+                                        <span class="text-xs text-slate-600 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white transition-colors">Avec Piscine</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2.5 cursor-pointer group">
+                                        <input type="checkbox" id="feat-groupe" onchange="filterProperties()" class="rounded border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-amber-500 focus:ring-amber-500/50 h-4 w-4">
+                                        <span class="text-xs text-slate-600 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white transition-colors">Groupe Secours / Solaire</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2.5 cursor-pointer group">
+                                        <input type="checkbox" id="feat-mer" onchange="filterProperties()" class="rounded border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-amber-500 focus:ring-amber-500/50 h-4 w-4">
+                                        <span class="text-xs text-slate-600 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white transition-colors">Vue sur mer (Cotonou)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Tri -->
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Trier par</label>
+                                <select id="filter-sort" onchange="filterProperties()" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2.5 text-xs focus:border-amber-500 dark:focus:border-amber-400/50 text-slate-800 dark:text-slate-200 outline-none cursor-pointer">
+                                    <option value="newest">Les plus récents</option>
+                                    <option value="price-asc">Prix : Croissant</option>
+                                    <option value="price-desc">Prix : Décroissant</option>
+                                    <option value="size-desc">Surface : Décroissant</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Grid Listings & Count -->
+                <div class="flex-grow">
+                    <div class="flex justify-between items-center mb-6">
+                        <div>
+                            <h2 class="text-xl sm:text-2xl font-bold font-title text-slate-900 dark:text-white">Biens Disponibles</h2>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Dénichés par nos courtiers certifiés.</p>
+                        </div>
+                        <span id="results-count" class="text-xs font-bold text-amber-600 dark:text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3.5 py-1.5 rounded-full">
+                            0 bien trouvé
+                        </span>
+                    </div>
+
+                    <!-- No results container -->
+                    <div id="no-results" class="hidden text-center py-20 bg-white dark:bg-[#0E1524] rounded-3xl border border-slate-200/50 dark:border-slate-900 shadow-sm">
+                        <div class="bg-slate-100 dark:bg-slate-950 p-4 rounded-full inline-block mb-4 border border-slate-200/50 dark:border-slate-850">
+                            <i data-lucide="search-x" class="h-10 w-10 text-slate-400 dark:text-slate-500"></i>
+                        </div>
+                        <p class="text-slate-700 dark:text-slate-400 text-lg font-medium">Aucun bien correspondant à vos critères.</p>
+                        <p class="text-xs text-slate-500 mt-1">Modifiez vos filtres ou élargissez la recherche.</p>
+                        <button onclick="resetFilters()" class="mt-5 bg-amber-500 hover:bg-amber-600 text-slate-950 px-5 py-2.5 rounded-xl text-sm font-bold transition">
+                            Réinitialiser les filtres
+                        </button>
+                    </div>
+
+                    <!-- Grid list of properties -->
+                    <div id="properties-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Injecté par JavaScript -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ================= TESTIMONIALS SECTION ================= -->
+            <section class="mt-24 border-t border-slate-200 dark:border-slate-900 pt-16">
+                <div class="text-center mb-12">
+                    <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest bg-amber-500/10 border border-amber-500/25 px-4 py-1.5 rounded-full">Témoignages</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold font-title text-slate-900 dark:text-white mt-4">Ce qu'en disent nos clients</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2">Découvrez les retours d'expérience de nos acquéreurs locaux et de la diaspora.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-900 p-6 rounded-3xl shadow-sm hover:shadow-md transition">
+                        <div class="flex items-center space-x-1.5 text-amber-500 mb-4">
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-655 dark:text-slate-350 italic leading-relaxed">"J'avais très peur d'acheter un terrain à Cotonou à cause des histoires de litiges et de double-vente. L'équipe de Bénin Prestige a audité le Titre Foncier en 48 heures. Une sécurité inestimable pour la diaspora !"</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-850 flex items-center space-x-3">
+                            <div class="h-9 w-9 rounded-full bg-amber-500 flex items-center justify-center font-bold text-slate-950 text-xs">MS</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-900 dark:text-white">Marc-Aurel S.</h4>
+                                <p class="text-[10px] text-slate-450 dark:text-slate-500">Cadre en Logistique, Diaspora Paris</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-900 p-6 rounded-3xl shadow-sm hover:shadow-md transition">
+                        <div class="flex items-center space-x-1.5 text-amber-500 mb-4">
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-655 dark:text-slate-350 italic leading-relaxed font-light">"Pour ma clinique médicale, je recherchais une villa d'angle commerciale de plain-pied à Calavi. L'agence a négocié le prix de manière professionnelle et géré le dossier chez le notaire de A à Z."</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-850 flex items-center space-x-3">
+                            <div class="h-9 w-9 rounded-full bg-emerald-600 flex items-center justify-center font-bold text-white text-xs">SO</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-900 dark:text-white">Dr. Sophie O.</h4>
+                                <p class="text-[10px] text-slate-450 dark:text-slate-500">Médecin Gynécologue, Cotonou</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-900 p-6 rounded-3xl shadow-sm hover:shadow-md transition">
+                        <div class="flex items-center space-x-1.5 text-amber-500 mb-4">
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-655 dark:text-slate-350 italic leading-relaxed">"Leur réactivité sur WhatsApp est incroyable. On m'a envoyé des vidéos de drone de la parcelle d'Arconville le jour même. Pas de frais d'agence cachés ni de harcèlement de démarcheurs."</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-850 flex items-center space-x-3">
+                            <div class="h-9 w-9 rounded-full bg-slate-900 dark:bg-slate-800 flex items-center justify-center font-bold text-white text-xs">HD</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-900 dark:text-white">El-Hadj Diallo</h4>
+                                <p class="text-[10px] text-slate-450 dark:text-slate-500">Opérateur Économique, Marché Dantokpa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- ================= TAB 2: BUYER GUIDE & FAQ ================= -->
+        <section id="tab-guide" class="tab-content hidden max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/25 px-4 py-1.5 rounded-full">Achat sécurisé</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-title text-slate-900 dark:text-white mt-4">Sécurité Foncière & Guide d'Achat au Bénin</h2>
+                <p class="text-slate-500 dark:text-slate-400 mt-2 text-xs sm:text-sm">Évitez les arnaques foncières et découvrez le processus réglementaire de l'ANDF.</p>
+            </div>
+
+            <!-- Steps -->
+            <div class="space-y-4 mb-16">
+                <!-- Step 1 -->
+                <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-850 rounded-3xl p-6 transition shadow-sm hover:shadow-md">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 rounded-xl p-3 font-title font-extrabold text-lg shrink-0">01</div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white font-title mb-2">
+                                Le Titre Foncier (TF) – L'unique sécurité définitive
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-655 dark:text-slate-300 leading-relaxed font-light">
+                                Au Bénin, le **Titre Foncier (TF)** est le seul et unique document officiel qui garantit un droit de propriété inattaquable et définitif. Créé auprès de l'**ANDF** (Agence Nationale du Domaine et du Foncier), il élimine tout risque de double vente ou de litige coutumier.
+                            </p>
+                            <div class="mt-3 bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-100 dark:border-emerald-500/20 text-emerald-800 dark:text-emerald-450 p-3.5 rounded-2xl text-xs flex items-center">
+                                <i data-lucide="check-circle" class="h-4.5 w-4.5 mr-2 shrink-0 text-emerald-600 dark:text-emerald-400"></i>
+                                <span><strong>Conseil Prestige :</strong> N'achetez jamais une parcelle chère sans exiger un rapport de recherche foncière à l'ANDF. Nous gérons cette démarche pour vous.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-850 rounded-3xl p-6 transition shadow-sm hover:shadow-md">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 rounded-xl p-3 font-title font-extrabold text-lg shrink-0">02</div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white font-title mb-2">
+                                L'Attestation de Détention Coutumière (ADC) & Recasement
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-655 dark:text-slate-300 leading-relaxed font-light">
+                                Pour les parcelles non encore dotées d'un Titre Foncier, le vendeur doit présenter une **ADC** (délivrée par la mairie). Si la zone est lotie, vous devez également réclamer la **Fiche de Recasement** mentionnant le numéro d'îlot et de lot actuel de la parcelle.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-850 rounded-3xl p-6 transition shadow-sm hover:shadow-md">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 rounded-xl p-3 font-title font-extrabold text-lg shrink-0">03</div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white font-title mb-2">
+                                La Convention de Vente et le Rôle Obligatoire du Notaire
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-655 dark:text-slate-300 leading-relaxed font-light">
+                                La convention de vente doit être signée par le vendeur, l'acheteur et des témoins. **Attention :** Au Bénin, pour toute transaction immobilière d'une valeur supérieure ou égale à **10 000 000 FCFA**, le recours à un **Notaire** est strictement obligatoire pour acter le transfert et lancer la mutation du Titre Foncier.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= FAQ SECTION ================= -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold font-title text-slate-900 dark:text-white text-center mb-8">Foire Aux Questions (FAQ Foncier)</h3>
+                
+                <div class="space-y-3">
+                    <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-850 rounded-2xl p-5 cursor-pointer transition shadow-sm" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Est-il risqué d'acheter un terrain sans Titre Foncier (TF) ?</h4>
+                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-450 dark:text-slate-500 transform transition-transform"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Il est fortement déconseillé de payer le prix fort pour un terrain sans TF. À défaut, exigez une Attestation de Détention Coutumière (ADC) récente de moins d'un an, faites valider la convention de vente par le maire ou un notaire, et lancez la procédure de Titre Foncier dès la signature.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-850 rounded-2xl p-5 cursor-pointer transition shadow-sm" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Quel est le montant des frais de notaire au Bénin ?</h4>
+                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-450 dark:text-slate-500 transform transition-transform"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Les honoraires du notaire et les frais d'enregistrement varient généralement entre 3% et 7% de la valeur déclarée du bien. Cela inclut la taxe de publicité foncière reversée à l'État et les droits d'enregistrement fonciers à la DGI.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-850 rounded-2xl p-5 cursor-pointer transition shadow-sm" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Comment la diaspora peut-elle acheter sans se faire arnaquer ?</h4>
+                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-450 dark:text-slate-500 transform transition-transform"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Bénin Prestige propose un service d'audit foncier à distance. Nous menons les enquêtes à la mairie et à l'ANDF pour vous, gérons les signatures d'actes authentiques par procuration notariée sécurisée et vous transmettons des rapports vidéos certifiés.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-850 rounded-2xl p-5 cursor-pointer transition shadow-sm" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Qu'est-ce que le recasement et pourquoi est-il crucial ?</h4>
+                            <i data-lucide="chevron-down" class="h-4 w-4 text-slate-450 dark:text-slate-500 transform transition-transform"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Le recasement désigne l'attribution finale des lots définitifs après des opérations d'urbanisme (lotissement). Acheter une parcelle non recasée (non attribuée définitivement) vous expose à un risque de diminution de surface ou d'expropriation si le plan de tracé routier change.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consultation advice -->
+            <div class="bg-white dark:bg-[#0E1524] border border-slate-200 dark:border-slate-850 p-8 rounded-3xl text-center shadow-sm mb-8">
+                <i data-lucide="help-circle" class="h-10 w-10 text-amber-600 dark:text-amber-400 mx-auto mb-3"></i>
+                <h3 class="text-lg font-bold font-title text-slate-900 dark:text-white mb-2">Besoin de faire vérifier des documents ?</h3>
+                <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-xl mx-auto mb-6">Nos experts analysent vos conventions de vente, attestations d'attribution, et lancent des requêtes de vérification de Titres Fonciers.</p>
+                <a href="https://wa.me/22997000000?text=Bonjour%20Bénin%20Prestige%20Immobilier,%20je%20souhaite%20faire%20analyser%20les%20documents%20d'une%20parcelle%20au%20Bénin." target="_blank"
+                    class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-6 py-3 rounded-xl transition inline-flex items-center space-x-2 shadow-md">
+                    <i data-lucide="phone-call" class="h-4 w-4"></i>
+                    <span>Consultation Juridique par WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- FORMULAIRE VERIFICATION TITRE FONCIER -->
+            <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-850 rounded-3xl p-6 sm:p-8 shadow-sm">
+                <h3 class="font-title font-bold text-base text-slate-900 dark:text-white mb-3 flex items-center border-b border-slate-100 dark:border-slate-800 pb-3">
+                    <i data-lucide="shield-check" class="h-5 w-5 text-amber-600 dark:text-amber-400 mr-2"></i>
+                    Demande d'Audit & Vérification de Titre Foncier (TF)
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+                    Vous convoitez une parcelle au Bénin mais vous craignez une double vente ou un litige foncier ? Mandatez notre département juridique pour auditer le document auprès de l'ANDF (Agence Nationale du Domaine et du Foncier).
+                </p>
+
+                <form onsubmit="handleTFAuditRequest(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-550 dark:text-slate-400 mb-1">Nom Complet *</label>
+                            <input type="text" id="tf-audit-name" required placeholder="Ex: Jean Houndékon"
+                                class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-550 dark:text-slate-400 mb-1">WhatsApp (Avec indicatif) *</label>
+                            <input type="text" id="tf-audit-phone" required placeholder="Ex: +229 97 00 00 00"
+                                class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-550 dark:text-slate-400 mb-1">Référence TF / Lot / Parcelle *</label>
+                            <input type="text" id="tf-audit-ref" required placeholder="Ex: TF N° 12.345 Cotonou ou Lot 450"
+                                class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-550 dark:text-slate-400 mb-1">Commune / Ville *</label>
+                            <select id="tf-audit-city" required
+                                class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-white focus:outline-none focus:border-amber-500">
+                                <option value="Cotonou">Cotonou</option>
+                                <option value="Abomey-Calavi">Abomey-Calavi</option>
+                                <option value="Ouidah">Ouidah</option>
+                                <option value="Porto-Novo">Porto-Novo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-550 dark:text-slate-400 mb-1">Précisions géographiques</label>
+                        <textarea id="tf-audit-notes" rows="3" placeholder="Ex: Situé à Fidjrossè Fiyégnon, à 200m du goudron..."
+                            class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-amber-500"></textarea>
+                    </div>
+
+                    <div class="flex justify-end pt-2">
+                        <button type="submit" class="w-full sm:w-auto bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs px-6 py-3.5 rounded-xl transition inline-flex items-center justify-center space-x-2 shadow-md">
+                            <i data-lucide="send" class="h-4 w-4"></i>
+                            <span>Soumettre la Demande d'Audit</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ================= TAB 3: MORTGAGE CALCULATOR ================= -->
+        <section id="tab-calculator" class="tab-content hidden max-w-2xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest bg-amber-500/10 border border-amber-500/25 px-4 py-1.5 rounded-full">Simulateur Bancaire</span>
+                <h2 class="text-3xl font-bold font-title text-slate-900 dark:text-white mt-4">Simulateur de Mensualités</h2>
+                <p class="text-slate-500 dark:text-slate-400 mt-2 text-xs sm:text-sm">Calculez le coût estimé de votre prêt immobilier auprès des banques locales (Ecobank, BOA, BOA, etc.).</p>
+            </div>
+
+            <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-850 p-6 sm:p-8 rounded-3xl shadow-sm">
+                <div class="space-y-6">
+                    <!-- Montant de l'acquisition -->
+                    <div>
+                        <div class="flex justify-between text-xs sm:text-sm font-semibold mb-2">
+                            <span class="text-slate-600 dark:text-slate-300">Prix du bien</span>
+                            <span id="calc-val-price" class="text-amber-600 dark:text-amber-400 font-title font-bold">50 000 000 FCFA</span>
+                        </div>
+                        <input type="range" id="calc-price" min="10000000" max="500000000" step="5000000" value="50000000" oninput="calculateMortgage()"
+                            class="w-full h-2 bg-slate-200 dark:bg-slate-950 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                        <div class="flex justify-between text-[10px] text-slate-400 mt-1">
+                            <span>10M FCFA</span>
+                            <span>500M FCFA</span>
+                        </div>
+                    </div>
+
+                    <!-- Apport Personnel -->
+                    <div>
+                        <div class="flex justify-between text-xs sm:text-sm font-semibold mb-2">
+                            <span class="text-slate-600 dark:text-slate-300">Votre apport personnel</span>
+                            <span id="calc-val-apport" class="text-amber-600 dark:text-amber-400 font-title font-bold">10 000 000 FCFA</span>
+                        </div>
+                        <input type="range" id="calc-apport" min="0" max="200000000" step="2000000" value="10000000" oninput="calculateMortgage()"
+                            class="w-full h-2 bg-slate-200 dark:bg-slate-950 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                        <div class="flex justify-between text-[10px] text-slate-400 mt-1">
+                            <span>0 FCFA</span>
+                            <span>200M FCFA</span>
+                        </div>
+                    </div>
+
+                    <!-- Durée du prêt -->
+                    <div>
+                        <div class="flex justify-between text-xs sm:text-sm font-semibold mb-2">
+                            <span class="text-slate-600 dark:text-slate-300">Durée du crédit</span>
+                            <span id="calc-val-duration" class="text-amber-600 dark:text-amber-400 font-title font-bold">15 Ans</span>
+                        </div>
+                        <input type="range" id="calc-duration" min="5" max="25" step="1" value="15" oninput="calculateMortgage()"
+                            class="w-full h-2 bg-slate-200 dark:bg-slate-950 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                        <div class="flex justify-between text-[10px] text-slate-400 mt-1">
+                            <span>5 Ans</span>
+                            <span>25 Ans</span>
+                        </div>
+                    </div>
+
+                    <!-- Taux d'intérêt -->
+                    <div>
+                        <div class="flex justify-between text-xs sm:text-sm font-semibold mb-2">
+                            <span class="text-slate-600 dark:text-slate-300">Taux d'intérêt annuel (Moyen UEMOA)</span>
+                            <span id="calc-val-rate" class="text-amber-600 dark:text-amber-400 font-title font-bold">7.5 %</span>
+                        </div>
+                        <input type="range" id="calc-rate" min="4.5" max="12" step="0.25" value="7.5" oninput="calculateMortgage()"
+                            class="w-full h-2 bg-slate-200 dark:bg-slate-950 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                        <div class="flex justify-between text-[10px] text-slate-400 mt-1">
+                            <span>4.5% (Taux bas)</span>
+                            <span>12% (Taux élevé)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div class="mt-8 border-t border-slate-200 dark:border-slate-800/80 pt-6 text-center">
+                    <p class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-semibold">Mensualités Estimatives</p>
+                    <h3 id="calc-result" class="text-2xl sm:text-3xl font-extrabold font-title text-emerald-600 dark:text-emerald-455 mt-2">375 000 FCFA / mois</h3>
+                    <p class="text-[10px] text-slate-450 mt-2 max-w-sm mx-auto">Calcul indicatif brut hors assurance emprunteur. Le taux dépend des conditions d'octroi de votre banque.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 3.5: PROPERTY ESTIMATION ================= -->
+        <section id="tab-estimation" class="tab-content hidden max-w-2xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest bg-amber-500/10 border border-amber-500/25 px-4 py-1.5 rounded-full">Estimation Gratuite</span>
+                <h2 class="text-3xl font-bold font-title text-slate-900 dark:text-white mt-4">Estimer la Valeur de votre Bien</h2>
+                <p class="text-slate-500 dark:text-slate-400 mt-2 text-xs sm:text-sm">Obtenez une estimation indicative instantanée pour louer ou vendre votre bien immobilier au Bénin (Cotonou, Calavi, Ouidah).</p>
+            </div>
+
+            <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-850 p-6 sm:p-8 rounded-3xl shadow-sm space-y-6">
+                <form id="estimation-form" onsubmit="calculateEstimation(event)" class="space-y-5">
+                    <!-- Type de Bien -->
+                    <div>
+                        <label class="block text-xs sm:text-sm font-semibold mb-2 text-slate-900 dark:text-slate-100">Type de Bien</label>
+                        <div class="grid grid-cols-3 gap-3">
+                            <label class="border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 flex flex-col items-center justify-center cursor-pointer hover:border-amber-500 dark:hover:border-amber-400 transition bg-slate-50/50 dark:bg-slate-950/40 text-slate-700 dark:text-slate-300">
+                                <input type="radio" name="est-type" value="villa" checked onclick="updateEstFields()" class="sr-only">
+                                <i data-lucide="home" class="h-5 w-5 mb-2"></i>
+                                <span class="text-[10px] sm:text-xs font-bold">Villa / Duplex</span>
+                            </label>
+                            <label class="border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 flex flex-col items-center justify-center cursor-pointer hover:border-amber-500 dark:hover:border-amber-400 transition bg-slate-50/50 dark:bg-slate-950/40 text-slate-700 dark:text-slate-300">
+                                <input type="radio" name="est-type" value="appartement" onclick="updateEstFields()" class="sr-only">
+                                <i data-lucide="building" class="h-5 w-5 mb-2"></i>
+                                <span class="text-[10px] sm:text-xs font-bold">Appartement</span>
+                            </label>
+                            <label class="border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 flex flex-col items-center justify-center cursor-pointer hover:border-amber-500 dark:hover:border-amber-400 transition bg-slate-50/50 dark:bg-slate-950/40 text-slate-700 dark:text-slate-300">
+                                <input type="radio" name="est-type" value="terrain" onclick="updateEstFields()" class="sr-only">
+                                <i data-lucide="map" class="h-5 w-5 mb-2"></i>
+                                <span class="text-[10px] sm:text-xs font-bold">Terrain / Parcelle</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Projet / Type de transaction -->
+                    <div>
+                        <label class="block text-xs sm:text-sm font-semibold mb-2 text-slate-900 dark:text-slate-100">Projet</label>
+                        <select id="est-offer" onchange="updateEstFields()" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-3 rounded-xl text-xs sm:text-sm text-slate-900 dark:text-white focus:outline-none focus:border-amber-500">
+                            <option value="achat">Estimer le prix de Vente</option>
+                            <option value="location">Estimer le prix de Loyer mensuel</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Localisation -->
+                        <div>
+                            <label class="block text-xs sm:text-sm font-semibold mb-2 text-slate-900 dark:text-slate-100">Quartier / Zone</label>
+                            <select id="est-zone" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-3 rounded-xl text-xs sm:text-sm text-slate-900 dark:text-white focus:outline-none focus:border-amber-500">
+                                <option value="haie_vive">La Haie Vive (Cotonou)</option>
+                                <option value="fidjrosse">Fidjrossè (Cotonou)</option>
+                                <option value="cadjehoun">Cadjehoun / Cocotiers (Cotonou)</option>
+                                <option value="akpakpa">Akpakpa (Cotonou)</option>
+                                <option value="arconville">Calavi - Arconville (Calavi)</option>
+                                <option value="kpota">Calavi - Kpota (Calavi)</option>
+                                <option value="ouidah">Ouidah (Zone Touristique)</option>
+                                <option value="porto_novo">Porto-Novo (Centre)</option>
+                            </select>
+                        </div>
+
+                        <!-- Surface ou chambres -->
+                        <div id="est-size-container">
+                            <label class="block text-xs sm:text-sm font-semibold mb-2 text-slate-900 dark:text-slate-100" id="est-size-label">Superficie (m²)</label>
+                            <input type="number" id="est-size" required value="300" min="10"
+                                class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-3 rounded-xl text-xs sm:text-sm text-slate-900 dark:text-white focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+
+                    <!-- Options & Equipements -->
+                    <div>
+                        <label class="block text-xs sm:text-sm font-semibold mb-2 text-slate-900 dark:text-slate-100">Équipements & Garanties</label>
+                        <div class="grid grid-cols-2 gap-3 text-xs">
+                            <label class="flex items-center space-x-2 bg-slate-50/50 dark:bg-slate-950/40 p-3 rounded-xl border border-slate-200/50 dark:border-slate-800/80 cursor-pointer">
+                                <input type="checkbox" id="est-opt-tf" checked class="accent-amber-550 h-4 w-4">
+                                <span class="text-slate-700 dark:text-slate-300">Titre Foncier (TF)</span>
+                            </label>
+                            <label class="flex items-center space-x-2 bg-slate-50/50 dark:bg-slate-950/40 p-3 rounded-xl border border-slate-200/50 dark:border-slate-800/80 cursor-pointer">
+                                <input type="checkbox" id="est-opt-piscine" class="accent-amber-550 h-4 w-4">
+                                <span class="text-slate-700 dark:text-slate-300">Piscine Privée</span>
+                            </label>
+                            <label class="flex items-center space-x-2 bg-slate-50/50 dark:bg-slate-950/40 p-3 rounded-xl border border-slate-200/50 dark:border-slate-800/80 cursor-pointer">
+                                <input type="checkbox" id="est-opt-route" class="accent-amber-550 h-4 w-4">
+                                <span class="text-slate-700 dark:text-slate-300">Accès Goudronné</span>
+                            </label>
+                            <label class="flex items-center space-x-2 bg-slate-50/50 dark:bg-slate-950/40 p-3 rounded-xl border border-slate-200/50 dark:border-slate-800/80 cursor-pointer">
+                                <input type="checkbox" id="est-opt-securite" class="accent-amber-550 h-4 w-4">
+                                <span class="text-slate-700 dark:text-slate-300">Sécurité 24h/7d</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 dark:bg-amber-500 dark:hover:bg-amber-400 text-white dark:text-slate-950 font-bold py-3.5 rounded-xl transition text-xs shadow-md">
+                        Calculer l'Estimation Prestige
+                    </button>
+                </form>
+
+                <!-- Results -->
+                <div id="est-result-container" class="mt-8 border-t border-slate-200 dark:border-slate-800/80 pt-6 text-center hidden">
+                    <p class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-semibold">Fourchette d'Estimation</p>
+                    <h3 id="est-result-price" class="text-2xl sm:text-3xl font-extrabold font-title text-emerald-600 dark:text-emerald-455 mt-2">120 000 000 - 150 000 000 FCFA</h3>
+                    <p class="text-[10px] text-slate-450 mt-2 max-w-sm mx-auto">Cette valeur est fournie à titre purement indicatif basée sur le marché de prestige local au Bénin.</p>
+                    
+                    <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+                        <button onclick="contactAgentForEstimation()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-5 py-3 rounded-xl transition inline-flex items-center justify-center space-x-2 shadow-md">
+                            <i data-lucide="phone" class="h-4 w-4"></i>
+                            <span>Faire expertiser par l'agence</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 4: FAVORITES ================= -->
+        <section id="tab-favorites" class="tab-content hidden">
+            <h2 class="text-2xl font-bold font-title text-slate-900 dark:text-white mb-6">Vos Favoris</h2>
+            <div id="favorites-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Rempli en JS -->
+            </div>
+            <div id="no-favorites" class="hidden text-center py-20 bg-white dark:bg-[#0E1524] rounded-3xl border border-slate-200/50 dark:border-slate-900 shadow-sm">
+                <i data-lucide="heart-off" class="h-12 w-12 text-slate-450 mx-auto mb-3"></i>
+                <p class="text-slate-700 dark:text-slate-400 text-lg font-medium">Vous n'avez aucun bien en favoris pour l'instant.</p>
+                <p class="text-xs text-slate-500 mt-1">Cliquez sur le cœur d'une annonce pour la retrouver ici.</p>
+                <button onclick="navigateTab('explore')" class="mt-4 bg-amber-500 text-slate-950 px-4 py-2.5 rounded-xl text-xs font-bold hover:bg-amber-600 transition">
+                    Découvrir les annonces
+                </button>
+            </div>
+        </section>
+
+        <!-- ================= TAB 5: AGENT PORTAL ================= -->
+        <section id="tab-agent" class="tab-content hidden">
+            <div class="flex justify-between items-center mb-8 border-b border-slate-200 dark:border-slate-900 pb-5">
+                <div>
+                    <h2 class="text-2xl font-bold font-title text-slate-900 dark:text-white">Console Agent Immobilier</h2>
+                    <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-1 font-semibold flex items-center">
+                        <span class="h-2 w-2 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span>
+                        Accès collaborateur actif • Bénin Prestige Pro
+                    </p>
+                </div>
+                <button onclick="logoutAgent()" class="text-xs bg-red-500/10 border border-red-500/20 hover:bg-red-500 text-red-500 hover:text-white px-3.5 py-2 rounded-xl font-bold transition flex items-center space-x-1">
+                    <i data-lucide="log-out" class="h-3.5 w-3.5"></i>
+                    <span>Déconnexion</span>
+                </button>
+            </div>
+
+            <!-- STATS CARDS -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Card 1: Total Listings -->
+                <div class="relative overflow-hidden bg-gradient-to-br from-white to-slate-50 dark:from-[#0E1524] dark:to-[#090D16] border border-slate-200/60 dark:border-slate-850 p-6 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 group">
+                    <div class="absolute -right-4 -bottom-4 text-slate-100 dark:text-slate-900/10 group-hover:scale-110 transition-transform duration-500 pointer-events-none">
+                        <i data-lucide="layout-grid" class="h-24 w-24"></i>
+                    </div>
+                    <div class="flex items-center space-x-4 relative z-10">
+                        <div class="bg-amber-500/10 text-amber-600 dark:text-amber-400 p-4 rounded-2xl border border-amber-500/20 shadow-inner group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors duration-300">
+                            <i data-lucide="layout-grid" class="h-6 w-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-wider text-slate-400 dark:text-slate-500 font-extrabold">Total Annonces</p>
+                            <h4 id="agent-stat-total" class="text-3xl font-black font-title text-slate-900 dark:text-white mt-0.5 tracking-tight">0</h4>
+                            <span class="text-[9px] text-emerald-600 dark:text-emerald-400 font-semibold flex items-center mt-1">
+                                <i data-lucide="refresh-cw" class="h-2.5 w-2.5 mr-1 animate-spin"></i> Catalogue actif
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Portfolio Value -->
+                <div class="relative overflow-hidden bg-gradient-to-br from-white to-slate-50 dark:from-[#0E1524] dark:to-[#090D16] border border-slate-200/60 dark:border-slate-850 p-6 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 group">
+                    <div class="absolute -right-4 -bottom-4 text-slate-100 dark:text-slate-900/10 group-hover:scale-110 transition-transform duration-500 pointer-events-none">
+                        <i data-lucide="wallet" class="h-24 w-24"></i>
+                    </div>
+                    <div class="flex items-center space-x-4 relative z-10">
+                        <div class="bg-emerald-500/10 text-emerald-600 dark:text-emerald-450 p-4 rounded-2xl border border-emerald-500/20 shadow-inner group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="wallet" class="h-6 w-6"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)]">
+                            <p class="text-[10px] uppercase tracking-wider text-slate-400 dark:text-slate-500 font-extrabold">Valeur du Portfolio</p>
+                            <h4 id="agent-stat-value" class="text-xl sm:text-2xl font-black font-title text-emerald-650 dark:text-emerald-400 mt-1 truncate tracking-tight">0 FCFA</h4>
+                            <span class="text-[9px] text-slate-450 dark:text-slate-500 font-semibold flex items-center mt-1">
+                                <i data-lucide="trending-up" class="h-2.5 w-2.5 mr-1"></i> Estimation cumulée
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Leads / Prospects -->
+                <div class="relative overflow-hidden bg-gradient-to-br from-white to-slate-50 dark:from-[#0E1524] dark:to-[#090D16] border border-slate-200/60 dark:border-slate-850 p-6 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 group">
+                    <div class="absolute -right-4 -bottom-4 text-slate-100 dark:text-slate-900/10 group-hover:scale-110 transition-transform duration-500 pointer-events-none">
+                        <i data-lucide="mail" class="h-24 w-24"></i>
+                    </div>
+                    <div class="flex items-center space-x-4 relative z-10">
+                        <div class="bg-blue-500/10 text-blue-600 dark:text-blue-450 p-4 rounded-2xl border border-blue-500/20 shadow-inner group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="mail" class="h-6 w-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-wider text-slate-400 dark:text-slate-500 font-extrabold">Prospects Qualifiés</p>
+                            <h4 id="agent-stat-leads" class="text-3xl font-black font-title text-slate-900 dark:text-white mt-0.5 tracking-tight">0</h4>
+                            <span class="text-[9px] text-blue-600 dark:text-blue-400 font-semibold flex items-center mt-1">
+                                <span class="h-1.5 w-1.5 rounded-full bg-blue-500 mr-1 animate-pulse"></span> Boîte de réception
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Add new listing form -->
+                <div class="lg:col-span-1 bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-900 rounded-3xl p-6 shadow-sm">
+                    <h3 class="font-title font-bold text-base text-slate-900 dark:text-white mb-5 flex items-center border-b border-slate-100 dark:border-slate-800 pb-3">
+                        <i data-lucide="plus-circle" class="h-5 w-5 text-amber-600 dark:text-amber-400 mr-2"></i>
+                        Ajouter un nouveau bien
+                    </h3>
+
+                    <form onsubmit="handleNewProperty(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-550 dark:text-slate-400 mb-1">Titre de l'Annonce *</label>
+                            <input type="text" id="add-title" required placeholder="Ex: Duplex de Luxe à la Haie Vive"
+                                class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-amber-500">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-550 dark:text-slate-400 mb-1">Type</label>
+                                <select id="add-type" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-slate-200 outline-none cursor-pointer">
+                                    <option value="villa">Villa</option>
+                                    <option value="appartement">Appartement</option>
+                                    <option value="terrain">Terrain</option>
+                                    <option value="bureau">Bureau / Local</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-550 dark:text-slate-400 mb-1">Offre</label>
+                                <select id="add-offer" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-slate-200 outline-none cursor-pointer">
+                                    <option value="achat">A Vendre</option>
+                                    <option value="location">A Louer</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-550 dark:text-slate-400 mb-1">Ville</label>
+                                <select id="add-city" onchange="updateAddDistrictOptions()" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-slate-200 outline-none cursor-pointer">
+                                    <option value="Cotonou">Cotonou</option>
+                                    <option value="Abomey-Calavi">Abomey-Calavi</option>
+                                    <option value="Ouidah">Ouidah</option>
+                                    <option value="Porto-Novo">Porto-Novo</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-550 dark:text-slate-400 mb-1">Quartier *</label>
+                                <select id="add-district" required class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-slate-200 outline-none cursor-pointer">
+                                    <!-- Rempli dynamiquement -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-550 dark:text-slate-400 mb-1">Prix (FCFA) *</label>
+                                <input type="number" id="add-price" required placeholder="Ex: 85000000"
+                                    class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-550 dark:text-slate-400 mb-1">Surface (m²) *</label>
+                                <input type="number" id="add-size" required placeholder="Ex: 250"
+                                    class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-amber-500">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-550 dark:text-slate-400 mb-1">Chambres</label>
+                                <input type="number" id="add-beds" value="0"
+                                    class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-550 dark:text-slate-400 mb-1">Salles de Bain</label>
+                                <input type="number" id="add-baths" value="0"
+                                    class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-amber-500">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-550 dark:text-slate-400 mb-1">URL Image</label>
+                            <input type="url" id="add-img" placeholder="https://images.unsplash.com/..."
+                                class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-amber-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-550 dark:text-slate-400 mb-1">Description *</label>
+                            <textarea id="add-desc" required rows="3" placeholder="Description du bien (prestations, documents, sécurité...)"
+                                class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-amber-500"></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-550 dark:text-slate-400 mb-2">Options Légales & Équipements</label>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <label class="flex items-center space-x-1.5 cursor-pointer">
+                                    <input type="checkbox" id="add-feat-tf" class="rounded border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-amber-500">
+                                    <span class="text-slate-700 dark:text-slate-300">Titre Foncier (TF)</span>
+                                </label>
+                                <label class="flex items-center space-x-1.5 cursor-pointer">
+                                    <input type="checkbox" id="add-feat-piscine" class="rounded border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-amber-500">
+                                    <span class="text-slate-700 dark:text-slate-300">Piscine</span>
+                                </label>
+                                <label class="flex items-center space-x-1.5 cursor-pointer">
+                                    <input type="checkbox" id="add-feat-groupe" class="rounded border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-amber-500">
+                                    <span class="text-slate-700 dark:text-slate-300">Groupe Electrogène</span>
+                                </label>
+                                <label class="flex items-center space-x-1.5 cursor-pointer">
+                                    <input type="checkbox" id="add-feat-mer" class="rounded border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-amber-500">
+                                    <span class="text-slate-700 dark:text-slate-300">Vue Mer</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl transition text-xs shadow-md">
+                            Publier l'Annonce
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Inbox Contacts / Leads & Properties management -->
+                <div class="lg:col-span-2 space-y-8">
+                    
+                    <!-- Leads Panel -->
+                    <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-900 rounded-3xl p-6 shadow-sm">
+                        <div class="flex justify-between items-center mb-5 border-b border-slate-100 dark:border-slate-800 pb-3">
+                            <h3 class="font-title font-bold text-base text-slate-900 dark:text-white flex items-center">
+                                <i data-lucide="inbox" class="h-5 w-5 text-amber-600 dark:text-amber-400 mr-2"></i>
+                                Demandes Clients (Leads Inbox)
+                            </h3>
+                            <button onclick="exportLeadsCSV()" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs px-3.5 py-1.5 rounded-xl transition flex items-center space-x-1.5 shadow-sm">
+                                <i data-lucide="download" class="h-3.5 w-3.5"></i>
+                                <span>Exporter CSV</span>
+                            </button>
+                        </div>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="border-b border-slate-100 dark:border-slate-850 text-xs text-slate-400 uppercase font-bold">
+                                        <th class="py-3 px-4">Client</th>
+                                        <th class="py-3 px-4">Bien</th>
+                                        <th class="py-3 px-4">Message</th>
+                                        <th class="py-3 px-4 text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="agent-leads-table">
+                                    <!-- Rempli en JS -->
+                                </tbody>
+                            </table>
+                            <div id="no-leads-msg" class="hidden text-center py-8 text-slate-400 text-xs">
+                                Aucune demande client reçue.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Manage Listings table -->
+                    <div class="bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-900 rounded-3xl p-6 shadow-sm">
+                        <h3 class="font-title font-bold text-base text-slate-900 dark:text-white mb-5 flex items-center border-b border-slate-100 dark:border-slate-800 pb-3">
+                            <i data-lucide="edit" class="h-5 w-5 text-amber-600 dark:text-amber-400 mr-2"></i>
+                            Gestion des Annonces
+                        </h3>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="border-b border-slate-100 dark:border-slate-850 text-xs text-slate-400 uppercase font-bold">
+                                        <th class="py-3 px-4">Bien</th>
+                                        <th class="py-3 px-4">Localisation</th>
+                                        <th class="py-3 px-4">Prix</th>
+                                        <th class="py-3 px-4 text-right">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="agent-properties-table">
+                                    <!-- Rempli en JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/22997000000?text=Bonjour%20Bénin%20Prestige%20Immobilier,%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20offres%20en%20cours." target="_blank"
+        class="pulse-green fixed bottom-20 md:bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center group" title="Discuter sur WhatsApp">
+        <i data-lucide="message-circle" class="h-6 w-6"></i>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 text-xs font-bold whitespace-nowrap">WhatsApp Pro</span>
+    </a>
+
+    <!-- MOBILE BOTTOM NAVIGATION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#060B13]/95 backdrop-blur-md border-t border-slate-100 dark:border-slate-900/80 flex justify-around items-center h-16 pb-safe shadow-[0_-4px_20px_rgba(0,0,0,0.05)] transition-colors duration-300">
+        <button onclick="navigateTab('explore')" id="mob-btn-explore" class="flex flex-col items-center justify-center flex-grow text-amber-600 dark:text-amber-400 font-bold scale-105 transition-all">
+            <i data-lucide="compass" class="h-5 w-5 mb-0.5"></i>
+            <span class="text-[9px]">Découvrir</span>
+        </button>
+        <button onclick="navigateTab('guide')" id="mob-btn-guide" class="flex flex-col items-center justify-center flex-grow text-slate-500 dark:text-slate-400 hover:text-amber-500 transition-colors">
+            <i data-lucide="book-open" class="h-5 w-5 mb-0.5"></i>
+            <span class="text-[9px] font-medium">Guide</span>
+        </button>
+        <button onclick="navigateTab('calculator')" id="mob-btn-calculator" class="flex flex-col items-center justify-center flex-grow text-slate-500 dark:text-slate-400 hover:text-amber-500 transition-colors">
+            <i data-lucide="calculator" class="h-5 w-5 mb-0.5"></i>
+            <span class="text-[9px] font-medium">Prêt</span>
+        </button>
+        <button onclick="navigateTab('estimation')" id="mob-btn-estimation" class="flex flex-col items-center justify-center flex-grow text-slate-500 dark:text-slate-400 hover:text-amber-500 transition-colors">
+            <i data-lucide="badge-percent" class="h-5 w-5 mb-0.5"></i>
+            <span class="text-[9px] font-medium">Estimer</span>
+        </button>
+        <button onclick="navigateTab('favorites')" id="mob-btn-favorites" class="flex flex-col items-center justify-center flex-grow text-slate-500 dark:text-slate-400 hover:text-amber-500 transition-colors relative">
+            <i data-lucide="heart" class="h-5 w-5 mb-0.5"></i>
+            <span class="text-[9px] font-medium">Favoris</span>
+            <span id="mob-fav-badge" class="absolute top-1 right-3.5 bg-amber-500 text-slate-950 text-[8px] font-extrabold px-1.5 py-0.5 rounded-full hidden">0</span>
+        </button>
+    </div>
+
+    <!-- DETAIL MODAL CONTAINER -->
+    <div id="details-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden transition-opacity duration-300 opacity-0">
+        <div class="bg-white dark:bg-[#0E1524] border border-slate-100 dark:border-slate-800 rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative transform scale-95 transition-transform duration-300">
+            <!-- Close button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 bg-white/90 dark:bg-slate-950/80 text-slate-850 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 p-2.5 rounded-xl shadow-lg z-10 transition">
+                <i data-lucide="x" class="h-5 w-5"></i>
+            </button>
+            <div id="modal-content" class="text-slate-800 dark:text-slate-150">
+                <!-- Rempli par JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CUSTOM CONFIRMATION MODAL -->
+    <div id="confirm-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden transition-opacity duration-300 opacity-0">
+        <div class="bg-white dark:bg-[#0E1524] border border-slate-200 dark:border-slate-850 p-6 sm:p-8 rounded-3xl max-w-sm w-full shadow-2xl relative text-center transform scale-95 transition-transform duration-300">
+            <div class="bg-red-500/10 text-red-600 dark:text-red-400 p-4 rounded-2xl inline-block mb-4">
+                <i data-lucide="alert-triangle" class="h-8 w-8"></i>
+            </div>
+            <h3 class="font-title font-bold text-lg text-slate-900 dark:text-white" id="confirm-title">Supprimer ?</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 mb-6" id="confirm-message">Cette action est irréversible.</p>
+
+            <div class="grid grid-cols-2 gap-3">
+                <button type="button" id="confirm-cancel-btn" class="w-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold py-2.5 rounded-xl transition text-xs">
+                    Annuler
+                </button>
+                <button type="button" id="confirm-ok-btn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2.5 rounded-xl transition text-xs shadow-md">
+                    Supprimer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AGENT PORTAL PIN MODAL -->
+    <div id="agent-auth-modal" class="fixed inset-0 bg-slate-950/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white dark:bg-[#0E1524] border border-slate-200 dark:border-slate-800 p-6 sm:p-8 rounded-3xl max-w-sm w-full shadow-2xl relative text-center">
+            <button onclick="closeAgentAuth()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-655 dark:hover:text-white transition">
+                <i data-lucide="x" class="h-5 w-5"></i>
+            </button>
+            <div class="bg-amber-550/10 text-amber-600 dark:text-amber-400 p-4 rounded-2xl inline-block mb-4">
+                <i data-lucide="lock" class="h-8 w-8"></i>
+            </div>
+            <h3 class="font-title font-bold text-xl text-slate-900 dark:text-white">Espace Professionnel</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 mb-6">Entrez le code d'accès de l'agence pour gérer vos annonces et prospects.</p>
+
+            <form onsubmit="submitAgentAuth(event)" class="space-y-4">
+                <input type="password" id="agent-pin" maxlength="6" required placeholder="Code secret (Indice : 229)"
+                    class="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center tracking-widest text-lg font-bold text-slate-900 dark:text-white p-3 rounded-xl w-full focus:outline-none focus:border-amber-500">
+                <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 dark:bg-amber-500 dark:hover:bg-amber-400 text-white dark:text-slate-950 font-bold py-3 rounded-xl transition text-sm">
+                    S'authentifier
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-900 text-slate-505 dark:text-slate-400 py-12 text-sm mt-auto transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-title font-bold text-base mb-4 flex items-center">
+                        <span class="bg-gradient-to-tr from-emerald-600 to-amber-500 h-2.5 w-2.5 rounded-full mr-2"></span>
+                        Bénin Prestige Immobilier
+                    </h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Agence immobilière agréée, spécialisée dans la transaction sécurisée, l'audit légal et la promotion de patrimoines d'exception au Bénin.</p>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-title font-bold text-base mb-4">Zones Desservies</h4>
+                    <ul class="text-xs space-y-2">
+                        <li>📍 Cotonou (Haie Vive, Fidjrossè, Cadjehoun)</li>
+                        <li>📍 Abomey-Calavi (Arconville, Tankpè)</li>
+                        <li>📍 Ouidah (Zone Touristique, Plage)</li>
+                        <li>📍 Porto-Novo (Centre Administratif)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-title font-bold text-base mb-4">Contact Direct</h4>
+                    <p class="text-xs text-slate-550 dark:text-slate-400">Pour tout conseil juridique, de vente ou d'achat :</p>
+                    <a href="https://wa.me/22997000000" target="_blank" class="mt-3 inline-flex items-center space-x-2 bg-emerald-600/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-455 px-4 py-2.5 rounded-xl hover:bg-emerald-600/20 transition text-xs font-semibold">
+                        <i data-lucide="phone" class="h-4 w-4"></i>
+                        <span>WhatsApp : +229 97 00 00 00</span>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-slate-100 dark:border-slate-900/60 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-450 dark:text-slate-500 gap-4">
+                <p>&copy; 2026 Bénin Prestige Immobilier. Tous droits réservés.</p>
+                <div class="flex space-x-4">
+                    <button onclick="openAgentAuth()" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Portail Collaborateur</button>
+                    <span>•</span>
+                    <a href="#" class="hover:text-slate-800 dark:hover:text-slate-350">Mentions Légales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- APP SCRIPT -->
+    <script>
+        // Database & Storage setup
+        const defaultProperties = [
+            {
+                id: 1,
+                title: "Villa Somptueuse avec Piscine - La Haie Vive",
+                type: "villa",
+                offer: "achat",
+                price: 320000000,
+                city: "Cotonou",
+                district: "Haie Vive",
+                beds: 5,
+                baths: 4,
+                size: 380,
+                img: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+                images: [
+                    "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80"
+                ],
+                desc: "Magnifique villa de maître située dans le quartier le plus sécurisé et prisé de Cotonou, la Haie Vive. Elle offre de grands volumes lumineux, des finitions de luxe importées, une piscine à débordement de 12x5m, un grand jardin arboré, un groupe électrogène automatique et un système de sécurité avec caméras. Titre Foncier en règle disponible.",
+                features: ["tf", "piscine", "groupe"],
+                agent: "Armand Houndékon"
+            },
+            {
+                id: 2,
+                title: "Duplex Meublé de Standing - Front de Mer Fidjrossè",
+                type: "appartement",
+                offer: "location",
+                price: 1200000,
+                city: "Cotonou",
+                district: "Fidjrossè",
+                beds: 3,
+                baths: 3,
+                size: 190,
+                img: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80",
+                images: [
+                    "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1502005229762-fc1b2b812ca5?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80"
+                ],
+                desc: "Superbe duplex meublé haut de gamme idéal pour les séjours de vacances ou d'affaires. Situé en bordure de la route des pêches à Fidjrossè, il offre une vue imprenable sur l'océan Atlantique. Climatisation centrale, cuisine entièrement équipée, fibre optique haut débit, groupe électrogène et service de ménage quotidien inclus.",
+                features: ["piscine", "groupe", "mer"],
+                agent: "Marielle Toko"
+            },
+            {
+                id: 3,
+                title: "Terrain de 500m² Clôturé - Quartier Arconville",
+                type: "terrain",
+                offer: "achat",
+                price: 35000000,
+                city: "Abomey-Calavi",
+                district: "Arconville",
+                beds: 0,
+                baths: 0,
+                size: 500,
+                img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
+                images: [
+                    "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=80"
+                ],
+                desc: "Parcelle de choix de 500m² (20m x 25m) idéalement située à Arconville, Abomey-Calavi, à seulement 300m de la voie pavée. Entièrement clôturée avec portail en fer, sol ferme (pas de remblaiement nécessaire), zone viabilisée (eau et électricité disponibles). Document de Titre Foncier (TF) définitif.",
+                features: ["tf"],
+                agent: "Armand Houndékon"
+            },
+            {
+                id: 4,
+                title: "Appartement Moderne 3 Chambres - Cadjehoun",
+                type: "appartement",
+                offer: "location",
+                price: 450000,
+                city: "Cotonou",
+                district: "Cadjehoun",
+                beds: 3,
+                baths: 2,
+                size: 140,
+                img: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80",
+                images: [
+                    "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1502672023488-70e25813eb80?auto=format&fit=crop&w=800&q=80"
+                ],
+                desc: "Appartement de standing non meublé dans un immeuble récent et sécurisé à Cadjehoun. Grand salon avec balcon, cuisine moderne semi-équipée, chambres climatisées avec placards. Gardiennage 24h/24, suppresseur d'eau et groupe électrogène de secours pour les parties communes et privatives.",
+                features: ["groupe"],
+                agent: "Marielle Toko"
+            },
+            {
+                id: 5,
+                title: "Bureaux Professionnels Open Space - Ganhi",
+                type: "bureau",
+                offer: "location",
+                price: 1500000,
+                city: "Cotonou",
+                district: "Ganhi",
+                beds: 0,
+                baths: 2,
+                size: 300,
+                img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+                images: [
+                    "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80"
+                ],
+                desc: "Plateau de bureaux professionnels de 300m² en open space situé au cœur du quartier des affaires à Ganhi. Idéal pour siège d'entreprise, agence bancaire ou espace de co-working. Sanitaires H/F séparés, local technique, précâblage réseau fibre optique, climatisation installée et places de parking réservées.",
+                features: ["groupe"],
+                agent: "Armand Houndékon"
+            },
+            {
+                id: 6,
+                title: "Superbe Villa de Vacances - Zone Touristique Ouidah",
+                type: "villa",
+                offer: "achat",
+                price: 180000000,
+                city: "Ouidah",
+                district: "Zone Touristique",
+                beds: 4,
+                baths: 4,
+                size: 320,
+                img: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80",
+                images: [
+                    "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800&q=80"
+                ],
+                desc: "Villa d'architecte contemporaine construite sur un domaine de 1000m² à Ouidah, à proximité immédiate de la Porte du Non-Retour et de la plage. Offre de superbes terrasses, un espace détente avec paillote traditionnelle revisitée, une grande piscine, des panneaux solaires assurant une autonomie énergétique à 100% et un forage d'eau potable.",
+                features: ["piscine", "mer"],
+                agent: "Marielle Toko"
+            }
+        ];
+
+        const defaultLeads = [
+            { id: 1, name: "Koffi Mensah", email: "koffi@yahoo.fr", phone: "+22997654321", interest: "Villa Somptueuse avec Piscine - La Haie Vive", message: "Bonjour, je souhaite visiter cette villa samedi matin si possible. Je dispose du financement approuvé par ma banque.", date: "14/06/2026" },
+            { id: 2, name: "Chantal Gnahoui", email: "chantal@outlook.com", phone: "+33612345678", interest: "Terrain de 500m² Clôturé - Quartier Arconville", message: "Je suis intéressée par ce terrain à Calavi. Est-il possible d'avoir une copie du Titre Foncier pour vérification par mon notaire ?", date: "13/06/2026" }
+        ];
+
+        const districtsData = {
+            "Cotonou": ["Haie Vive", "Fidjrossè", "Cadjehoun", "Akpakpa", "Ganhi", "Cocotomey"],
+            "Abomey-Calavi": ["Arconville", "Tankpè", "Bidossessi", "Zogbadjè"],
+            "Ouidah": ["Zone Touristique", "Djègbadji", "Centre-ville"],
+            "Porto-Novo": ["Ouando", "Catchi", "Quartier administratif"]
+        };
+
+        // State variables
+        let properties = JSON.parse(localStorage.getItem('immo-benin-properties')) || defaultProperties;
+        let leads = JSON.parse(localStorage.getItem('immo-benin-leads')) || defaultLeads;
+        let favorites = JSON.parse(localStorage.getItem('immo-benin-favs')) || [];
+        let isAgent = sessionStorage.getItem('immo-benin-auth') === 'true';
+        let currentOfferFilter = 'all';
+
+        // DOM Elements
+        const grid = document.getElementById('properties-grid');
+        const resultsCount = document.getElementById('results-count');
+        const noResults = document.getElementById('no-results');
+        const modal = document.getElementById('details-modal');
+        const modalContent = document.getElementById('modal-content');
+
+        // Inputs
+        const filterKeyword = document.getElementById('search-keyword');
+        const heroCity = document.getElementById('hero-city');
+        const heroType = document.getElementById('hero-type');
+        const heroBudget = document.getElementById('hero-budget');
+        const filterDistrict = document.getElementById('filter-district');
+        const filterBudgetMin = document.getElementById('filter-budget-min');
+        const filterBudgetMax = document.getElementById('filter-budget-max');
+        const featTf = document.getElementById('feat-tf');
+        const featPiscine = document.getElementById('feat-piscine');
+        const featGroupe = document.getElementById('feat-groupe');
+        const featMer = document.getElementById('feat-mer');
+        const filterSort = document.getElementById('filter-sort');
+
+        // Page Load
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('opacity-0');
+            setTimeout(() => preloader.style.display = 'none', 500);
+            
+            updateDistrictOptions();
+            updateAddDistrictOptions();
+            filterProperties();
+            updateFavBadge();
+            calculateMortgage();
+            
+            const isDark = document.documentElement.classList.contains('dark');
+            document.getElementById('theme-icon').setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+            
+            if (isAgent) {
+                renderAgentDashboard();
+            }
+        });
+
+        // TOAST NOTIFICATIONS
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            
+            toast.className = `bg-white dark:bg-[#0E1524] border border-slate-200/80 dark:border-slate-800 pointer-events-auto flex items-center p-4 rounded-2xl shadow-xl transition-all duration-300 transform translate-x-10 opacity-0 border-l-4 ${
+                type === 'success' ? 'border-l-emerald-500' : 'border-l-amber-500'
+            }`;
+            
+            toast.innerHTML = `
+                <div class="mr-3 ${type === 'success' ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400'}">
+                    <i data-lucide="${type === 'success' ? 'check-circle' : 'alert-circle'}" class="h-5 w-5"></i>
+                </div>
+                <div class="text-xs font-semibold text-slate-800 dark:text-white">${message}</div>
+            `;
+            
+            container.appendChild(toast);
+            lucide.createIcons();
+            
+            setTimeout(() => {
+                toast.classList.remove('translate-x-10', 'opacity-0');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.add('translate-x-10', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 4000);
+        }
+
+        // TABS NAVIGATION SYSTEM
+        function navigateTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+                tab.classList.remove('block');
+            });
+            
+            const target = document.getElementById(`tab-${tabName}`);
+            if (target) {
+                target.classList.remove('hidden');
+                target.classList.add('block');
+            }
+
+            const hero = document.getElementById('hero-section');
+            if (tabName === 'explore') {
+                hero.classList.remove('hidden');
+            } else {
+                hero.classList.add('hidden');
+            }
+
+            // Reset navigation indicators
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.className = "nav-link text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-medium border-b-2 border-transparent pb-1 px-1 transition-all";
+            });
+            
+            const activeBtn = document.getElementById(`nav-btn-${tabName}`);
+            if (activeBtn) {
+                activeBtn.className = "nav-link text-amber-600 dark:text-amber-400 font-semibold border-b-2 border-amber-600 dark:border-amber-400 pb-1 px-1 transition-all";
+            }
+
+            // Sync Mobile navigation bar indicators
+            const mobileTabs = ['explore', 'guide', 'calculator', 'estimation', 'favorites'];
+            mobileTabs.forEach(name => {
+                const btn = document.getElementById(`mob-btn-${name}`);
+                if (btn) {
+                    btn.className = "flex flex-col items-center justify-center flex-grow text-slate-500 dark:text-slate-400 hover:text-amber-500 transition-colors";
+                }
+            });
+            const activeMobBtn = document.getElementById(`mob-btn-${tabName}`);
+            if (activeMobBtn) {
+                activeMobBtn.className = "flex flex-col items-center justify-center flex-grow text-amber-600 dark:text-amber-400 font-bold scale-105 transition-all";
+            }
+
+            if (tabName === 'favorites') renderFavorites();
+            if (tabName === 'agent') renderAgentDashboard();
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // FAQ DYNAMIC ACCORDION
+        function toggleFaq(element) {
+            const isActive = element.classList.contains('faq-active');
+            
+            // Close all first
+            document.querySelectorAll('.faq-active').forEach(faq => {
+                faq.classList.remove('faq-active');
+                faq.querySelector('[data-lucide]').style.transform = 'rotate(0deg)';
+            });
+
+            if (!isActive) {
+                element.classList.add('faq-active');
+                element.querySelector('[data-lucide]').style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // DISTRICT SELECT SYNC
+        function updateDistrictOptions() {
+            const city = heroCity.value;
+            filterDistrict.innerHTML = '<option value="">Tous les quartiers</option>';
+            
+            if (city && districtsData[city]) {
+                districtsData[city].forEach(d => {
+                    const opt = document.createElement('option');
+                    opt.value = d;
+                    opt.textContent = d;
+                    opt.className = "bg-white dark:bg-[#0E1524]";
+                    filterDistrict.appendChild(opt);
+                });
+            } else {
+                Object.keys(districtsData).forEach(c => {
+                    districtsData[c].forEach(d => {
+                        const opt = document.createElement('option');
+                        opt.value = d;
+                        opt.textContent = `${d} (${c})`;
+                        opt.className = "bg-white dark:bg-[#0E1524]";
+                        filterDistrict.appendChild(opt);
+                    });
+                });
+            }
+        }
+
+        function updateAddDistrictOptions() {
+            const addCity = document.getElementById('add-city').value;
+            const addDistrict = document.getElementById('add-district');
+            addDistrict.innerHTML = '';
+            
+            if (districtsData[addCity]) {
+                districtsData[addCity].forEach(d => {
+                    const opt = document.createElement('option');
+                    opt.value = d;
+                    opt.textContent = d;
+                    opt.className = "bg-white dark:bg-[#0E1524]";
+                    addDistrict.appendChild(opt);
+                });
+            }
+        }
+
+        // FORMATTERS & MULTI-CURRENCY ENGINE
+        let currentCurrency = 'XOF';
+
+        function changeCurrency(currency) {
+            currentCurrency = currency;
+            filterProperties();
+            if (isAgent) {
+                renderAgentDashboard();
+            }
+            calculateMortgage();
+        }
+
+        function formatFCFA(value) {
+            if (currentCurrency === 'EUR') {
+                const converted = Math.round(value / 655.957);
+                return new Intl.NumberFormat('fr-FR').format(converted) + ' €';
+            } else if (currentCurrency === 'USD') {
+                const converted = Math.round(value / 600);
+                return new Intl.NumberFormat('fr-FR').format(converted) + ' $';
+            } else {
+                return new Intl.NumberFormat('fr-FR').format(value) + ' FCFA';
+            }
+        }
+
+        function convertToEUR(fcfa) {
+            if (currentCurrency === 'EUR') {
+                const converted = Math.round(fcfa / 600);
+                return new Intl.NumberFormat('fr-FR').format(converted) + ' $';
+            } else {
+                const eur = Math.round(fcfa / 655.957);
+                return new Intl.NumberFormat('fr-FR').format(eur) + ' €';
+            }
+        }
+
+        // Helper to format WhatsApp message links safely
+        function getWhatsAppLink(phone, message) {
+            const cleanPhone = phone.replace(/\D/g, '');
+            return `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`;
+        }
+
+        // RENDER GRID PROPERTIES
+        function renderPropertiesList(data, targetGrid = grid) {
+            targetGrid.innerHTML = '';
+
+            if (data.length === 0) {
+                if (targetGrid === grid) {
+                    noResults.classList.remove('hidden');
+                    resultsCount.textContent = "0 bien";
+                }
+                return;
+            }
+
+            if (targetGrid === grid) {
+                noResults.classList.add('hidden');
+                resultsCount.textContent = `${data.length} bien${data.length > 1 ? 's' : ''} trouvé${data.length > 1 ? 's' : ''}`;
+            }
+
+            data.forEach(p => {
+                const isFav = favorites.some(favId => String(favId) === String(p.id));
+                const card = document.createElement('div');
+                card.className = "bg-white dark:bg-[#0E1524] border border-slate-200/60 dark:border-slate-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:border-slate-800 transition-all duration-300 group flex flex-col justify-between";
+
+                let badgesHTML = '';
+                if (p.features.includes('tf')) {
+                    badgesHTML += `<span class="bg-emerald-600 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider shadow">Titre Foncier (TF)</span>`;
+                }
+                if (p.offer === 'location' && p.price < 300000) {
+                    badgesHTML += `<span class="bg-amber-505 text-slate-950 text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider shadow">Meublé</span>`;
+                }
+
+                card.innerHTML = `
+                    <div>
+                        <!-- Image Container with Hover zoom -->
+                        <div class="relative overflow-hidden h-60 bg-slate-100 dark:bg-slate-950">
+                            <img src="${p.img || 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80'}" alt="${p.title}" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openModal('${p.id}')">
+                            
+                            <span class="absolute top-4 left-4 ${p.offer === 'achat' ? 'bg-amber-550 text-white' : 'bg-emerald-600 text-white'} text-[9px] font-extrabold px-2.5 py-1.5 rounded-lg uppercase tracking-wider shadow">
+                                ${p.offer === 'achat' ? 'À Vendre' : 'Location'}
+                            </span>
+
+                            <button onclick="sharePropertyOnWhatsApp(event, '${p.id}')" class="absolute top-4 right-14 bg-white/90 dark:bg-slate-900/90 border border-slate-200/50 dark:border-slate-800/80 p-2 rounded-xl text-slate-450 hover:text-emerald-500 transition duration-200" title="Partager sur WhatsApp">
+                                <i data-lucide="share-2" class="h-4.5 w-4.5"></i>
+                            </button>
+
+                            <button onclick="toggleFavorite(event, '${p.id}')" class="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 border border-slate-200/50 dark:border-slate-800/80 p-2 rounded-xl text-slate-400 hover:text-red-500 transition duration-200">
+                                <i data-lucide="heart" class="h-4.5 w-4.5 ${isFav ? 'fill-red-500 text-red-500' : ''}"></i>
+                            </button>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-6">
+                            <div class="flex justify-between items-center gap-2 mb-2">
+                                <span class="text-[10px] text-amber-600 dark:text-amber-400 font-bold uppercase tracking-widest">${p.type}</span>
+                                <div class="flex flex-wrap gap-1">${badgesHTML}</div>
+                            </div>
+                            
+                            <h3 onclick="openModal('${p.id}')" class="text-sm sm:text-base font-bold font-title text-slate-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400 transition cursor-pointer line-clamp-2 leading-snug">${p.title}</h3>
+                            
+                            <p class="text-slate-550 dark:text-slate-400 flex items-center text-xs mt-2.5">
+                                <i data-lucide="map-pin" class="h-3.5 w-3.5 mr-1 text-slate-400 shrink-0"></i> ${p.district}, ${p.city}
+                            </p>
+
+                            <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-855 flex flex-col">
+                                <span class="text-base sm:text-lg font-black font-title text-slate-900 dark:text-white">${formatFCFA(p.price)}${p.offer !== 'achat' ? ' / mois' : ''}</span>
+                                <span class="text-[9px] sm:text-[10px] text-slate-500 dark:text-slate-450 font-medium mt-0.5">Soit environ ${convertToEUR(p.price)}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Amenities Bar -->
+                    <div class="px-6 pb-6">
+                        <div class="bg-slate-50 dark:bg-[#060B13] p-3 rounded-2xl border border-slate-100 dark:border-slate-900 flex justify-around text-slate-600 dark:text-slate-350 text-xs">
+                            ${p.beds > 0 ? `<span class="flex items-center"><i data-lucide="bed" class="h-4 w-4 mr-1 text-amber-600 dark:text-amber-400"></i> <strong>${p.beds}</strong> ch</span>` : ''}
+                            ${p.baths > 0 ? `<span class="flex items-center"><i data-lucide="bath" class="h-4 w-4 mr-1 text-amber-600 dark:text-amber-400"></i> <strong>${p.baths}</strong> sdb</span>` : ''}
+                            <span class="flex items-center"><i data-lucide="maximize" class="h-4 w-4 mr-1 text-amber-600 dark:text-amber-400"></i> <strong>${p.size}</strong> m²</span>
+                        </div>
+                    </div>
+                `;
+                targetGrid.appendChild(card);
+            });
+
+            lucide.createIcons();
+        }
+
+        // OFFERS TABS
+        function setOfferFilter(offer) {
+            currentOfferFilter = offer;
+            
+            document.querySelectorAll('.offer-tab-btn').forEach(btn => {
+                btn.className = "offer-tab-btn py-1.5 px-2 rounded-lg text-xs font-semibold text-slate-655 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all";
+            });
+            
+            const activeBtn = document.getElementById(`btn-offer-${offer}`);
+            if (activeBtn) {
+                activeBtn.className = "offer-tab-btn py-1.5 px-2 rounded-lg text-xs font-semibold bg-amber-500 text-slate-950 transition-all";
+            }
+            
+            filterProperties();
+        }
+
+        // FILTER ENGINE
+        function filterProperties() {
+            const kw = filterKeyword.value.toLowerCase().trim();
+            const city = heroCity.value;
+            const type = heroType.value;
+            const budgetMax = heroBudget.value ? parseInt(heroBudget.value) : null;
+            const district = filterDistrict.value;
+            const minBudget = filterBudgetMin.value ? parseInt(filterBudgetMin.value) : null;
+            const maxBudget = filterBudgetMax.value ? parseInt(filterBudgetMax.value) : null;
+            
+            const wantTf = featTf.checked;
+            const wantPiscine = featPiscine.checked;
+            const wantGroupe = featGroupe.checked;
+            const wantMer = featMer.checked;
+            
+            let filtered = properties.filter(p => {
+                const matchesKw = kw === "" || 
+                    p.title.toLowerCase().includes(kw) || 
+                    p.desc.toLowerCase().includes(kw) || 
+                    p.city.toLowerCase().includes(kw) || 
+                    p.district.toLowerCase().includes(kw);
+                
+                const matchesCity = city === "" || p.city === city;
+                const matchesDistrict = district === "" || p.district === district;
+                const matchesType = type === "" || p.type === type;
+                
+                let matchesOffer = true;
+                if (currentOfferFilter === 'achat') {
+                    matchesOffer = p.offer === 'achat';
+                } else if (currentOfferFilter === 'location') {
+                    matchesOffer = p.offer === 'location';
+                }
+
+                let matchesBudget = true;
+                if (budgetMax) matchesBudget = p.price <= budgetMax;
+                if (minBudget) matchesBudget = matchesBudget && p.price >= minBudget;
+                if (maxBudget) matchesBudget = matchesBudget && p.price <= maxBudget;
+
+                let matchesTf = !wantTf || p.features.includes('tf');
+                let matchesPiscine = !wantPiscine || p.features.includes('piscine');
+                let matchesGroupe = !wantGroupe || p.features.includes('groupe');
+                let matchesMer = !wantMer || p.features.includes('mer');
+
+                return matchesKw && matchesCity && matchesDistrict && matchesType && matchesOffer && matchesBudget && matchesTf && matchesPiscine && matchesGroupe && matchesMer;
+            });
+
+            const sort = filterSort.value;
+            if (sort === 'price-asc') {
+                filtered.sort((a, b) => a.price - b.price);
+            } else if (sort === 'price-desc') {
+                filtered.sort((a, b) => b.price - a.price);
+            } else if (sort === 'size-desc') {
+                filtered.sort((a, b) => b.size - a.size);
+            } else {
+                filtered.sort((a, b) => b.id - a.id);
+            }
+
+            renderPropertiesList(filtered);
+        }
+
+        function resetFilters() {
+            filterKeyword.value = '';
+            heroCity.value = '';
+            heroType.value = '';
+            heroBudget.value = '';
+            filterDistrict.value = '';
+            filterBudgetMin.value = '';
+            filterBudgetMax.value = '';
+            featTf.checked = false;
+            featPiscine.checked = false;
+            featGroupe.checked = false;
+            featMer.checked = false;
+            filterSort.value = 'newest';
+            
+            setOfferFilter('all');
+            updateDistrictOptions();
+            filterProperties();
+            showToast("Tous les filtres ont été réinitialisés.");
+        }
+
+        // SWAP GALLERY MAIN IMAGE (Modal Carousel Feature)
+        function swapModalImage(src, activeThumb) {
+            const mainImg = document.getElementById('modal-main-img');
+            if (mainImg) {
+                mainImg.src = src;
+                
+                // Synchronize current index
+                activeModalImageIndex = activeModalImages.indexOf(src);
+                if (activeModalImageIndex === -1) activeModalImageIndex = 0;
+                
+                // Active thumbnail highlighting
+                document.querySelectorAll('.modal-thumb').forEach(thumb => {
+                    thumb.classList.remove('border-amber-500', 'scale-105');
+                    thumb.classList.add('border-transparent', 'opacity-60');
+                });
+                
+                activeThumb.classList.remove('opacity-60', 'border-transparent');
+                activeThumb.classList.add('border-amber-500', 'scale-105');
+            }
+        }
+
+        // NAVIGATE GALLERY CAROUSEL (Prev/Next buttons)
+        function navigateModalGallery(direction) {
+            if (activeModalImages.length <= 1) return;
+            activeModalImageIndex += direction;
+            if (activeModalImageIndex < 0) {
+                activeModalImageIndex = activeModalImages.length - 1;
+            } else if (activeModalImageIndex >= activeModalImages.length) {
+                activeModalImageIndex = 0;
+            }
+            
+            const targetSrc = activeModalImages[activeModalImageIndex];
+            const mainImg = document.getElementById('modal-main-img');
+            if (mainImg) {
+                mainImg.src = targetSrc;
+            }
+            
+            // Highlight the corresponding thumbnail
+            const thumbs = document.querySelectorAll('.modal-thumb');
+            thumbs.forEach((thumb, idx) => {
+                if (idx === activeModalImageIndex) {
+                    thumb.classList.remove('opacity-60', 'border-transparent');
+                    thumb.classList.add('border-amber-500', 'scale-105');
+                    thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                } else {
+                    thumb.classList.remove('border-amber-500', 'scale-105');
+                    thumb.classList.add('border-transparent', 'opacity-60');
+                }
+            });
+        }
+
+        // WHATSAPP SHARE FEATURE
+        function sharePropertyOnWhatsApp(event, id) {
+            if (event) event.stopPropagation();
+            const p = properties.find(item => String(item.id) === String(id));
+            if (!p) return;
+            
+            const priceStr = formatFCFA(p.price);
+            const message = `Bonjour ! Regarde cette offre d'exception de Bénin Prestige Immobilier :\n\n🏡 *${p.title}*\n📍 Quartier : ${p.district}, ${p.city}\n💰 Prix : ${priceStr}${p.offer !== 'achat' ? ' / mois' : ''}\n📐 Superficie : ${p.size} m²\n\nDécouvrez les détails complets sur notre portail immobilier de prestige !`;
+            const encoded = encodeURIComponent(message);
+            window.open(`https://wa.me/?text=${encoded}`, '_blank');
+        }
+
+        // TITRE FONCIER AUDIT REQUEST
+        function handleTFAuditRequest(event) {
+            event.preventDefault();
+            const name = document.getElementById('tf-audit-name').value;
+            const phone = document.getElementById('tf-audit-phone').value;
+            const ref = document.getElementById('tf-audit-ref').value;
+            const city = document.getElementById('tf-audit-city').value;
+            const notes = document.getElementById('tf-audit-notes').value;
+            
+            const newLead = {
+                id: Date.now(),
+                name: name,
+                email: "tf-audit@prestige.bj",
+                phone: phone,
+                interest: `Audit TF: ${ref} (${city})`,
+                message: `Demande d'audit foncier pour le Titre Foncier / Parcelle: ${ref}. Notes complémentaires : ${notes || 'Aucune'}`,
+                date: new Date().toLocaleDateString('fr-FR')
+            };
+            
+            leads.push(newLead);
+            localStorage.setItem('immo-benin-leads', JSON.stringify(leads));
+            
+            showToast("Votre demande d'audit de Titre Foncier a été soumise avec succès !", "success");
+            
+            const waMessage = `Bonjour Bénin Prestige Immobilier, je souhaite soumettre une demande de vérification de Titre Foncier.\n\nNom: ${name}\nTéléphone: ${phone}\nRéférence Foncier: ${ref}\nVille: ${city}\nNotes: ${notes || 'Aucune'}`;
+            const encoded = encodeURIComponent(waMessage);
+            
+            event.target.reset();
+            
+            setTimeout(() => {
+                window.open(`https://wa.me/22997000000?text=${encoded}`, '_blank');
+            }, 1000);
+        }
+
+        // OPEN DETAIL MODAL
+        let activeModalImages = [];
+        let activeModalImageIndex = 0;
+
+        function openModal(id) {
+            const p = properties.find(item => String(item.id) === String(id));
+            if (!p) return;
+
+            const featuresList = {
+                "tf": "Titre Foncier Enregistré",
+                "piscine": "Piscine Privée",
+                "groupe": "Groupe Secours / Solaire",
+                "mer": "Vue sur Mer / Front de Mer",
+                "climatisation": "Système de climatisation"
+            };
+
+            let featsHTML = '';
+            p.features.forEach(f => {
+                if (featuresList[f]) {
+                    featsHTML += `
+                        <div class="flex items-center text-xs text-slate-700 dark:text-slate-350 bg-slate-50 dark:bg-slate-950 p-3.5 rounded-xl border border-slate-100 dark:border-slate-850">
+                            <i data-lucide="check" class="h-4.5 w-4.5 text-emerald-600 dark:text-emerald-400 mr-2 shrink-0"></i>
+                            <span>${featuresList[f]}</span>
+                        </div>
+                    `;
+                }
+            });
+
+            // Gallery thumbnails builder
+            const imageSet = p.images || [p.img];
+            activeModalImages = imageSet;
+            activeModalImageIndex = 0;
+            let galleryHTML = '';
+            if (imageSet.length > 1) {
+                galleryHTML += `<div class="flex gap-2 overflow-x-auto p-4 bg-slate-50/50 dark:bg-slate-950/20 border-b border-slate-100 dark:border-slate-850">`;
+                imageSet.forEach((imgSrc, index) => {
+                    const isActive = index === 0;
+                    galleryHTML += `
+                        <img src="${imgSrc}" onclick="swapModalImage('${imgSrc}', this)" 
+                            class="modal-thumb h-14 w-20 object-cover rounded-lg cursor-pointer border-2 transition-all duration-200 shrink-0 ${
+                                isActive ? 'border-amber-500 scale-105' : 'border-transparent opacity-60 hover:opacity-100'
+                            }">
+                    `;
+                });
+                galleryHTML += `</div>`;
+            }
+
+            const msgWA = `Bonjour Bénin Prestige, je suis intéressé par l'annonce "${p.title}" (Réf: BP-${p.id}) située à ${p.district}. Pouvez-vous m'apporter plus d'informations et planifier une visite ?`;
+
+            modalContent.innerHTML = `
+                <!-- Print-only Brand Header -->
+                <div class="hidden print:flex items-center justify-between border-b border-slate-300 pb-4 mb-6">
+                    <div class="flex items-center space-x-2.5">
+                        <div class="bg-slate-900 p-2.5 rounded-xl text-white">
+                            <i data-lucide="building-2" class="h-5 w-5"></i>
+                        </div>
+                        <div class="flex flex-col text-left">
+                            <span class="text-lg font-bold font-title tracking-tight text-slate-900">BÉNIN PRESTIGE</span>
+                            <span class="text-[9px] text-emerald-600 font-bold uppercase tracking-wider -mt-0.5">Immobilier d'élite</span>
+                        </div>
+                    </div>
+                    <div class="text-right text-[10px] text-slate-500">
+                        <p class="font-bold text-slate-800">www.beninprestigeimmobilier.bj</p>
+                        <p>Contact : +229 97 00 00 00</p>
+                    </div>
+                </div>
+
+                <!-- Main Header Image -->
+                <div class="h-80 w-full overflow-hidden relative bg-slate-100 dark:bg-slate-950 group/carousel">
+                    <img id="modal-main-img" src="${p.img}" alt="${p.title}" class="w-full h-full object-cover transition-all duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-slate-900 via-transparent to-transparent pointer-events-none"></div>
+                    
+                    <!-- Prev Button -->
+                    ${imageSet.length > 1 ? `
+                    <button onclick="navigateModalGallery(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-xl transition duration-200 shadow-md">
+                        <i data-lucide="chevron-left" class="h-5 w-5"></i>
+                    </button>
+                    <!-- Next Button -->
+                    <button onclick="navigateModalGallery(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-xl transition duration-200 shadow-md">
+                        <i data-lucide="chevron-right" class="h-5 w-5"></i>
+                    </button>
+                    ` : ''}
+                </div>
+
+                <!-- Gallery Carousel thumbnails -->
+                ${galleryHTML}
+
+                <!-- Modal Body -->
+                <div class="p-6 md:p-8">
+                    
+                    <!-- Heading -->
+                    <div class="flex flex-wrap justify-between items-start gap-4 mb-6">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-xl text-[9px] font-bold tracking-widest bg-amber-600/10 dark:bg-amber-500/10 text-amber-700 dark:text-amber-400 uppercase border border-amber-500/20 mb-3">
+                                Référence BP-${p.id} • ${p.type}
+                            </span>
+                            <h2 class="text-2xl md:text-3xl font-extrabold font-title text-slate-900 dark:text-white leading-tight">${p.title}</h2>
+                            <p class="text-slate-550 dark:text-slate-400 flex items-center text-xs mt-2">
+                                <i data-lucide="map-pin" class="h-4 w-4 mr-1 text-slate-400 shrink-0"></i> ${p.district}, ${p.city}, Bénin
+                            </p>
+                        </div>
+                        <div class="text-left md:text-right">
+                            <p class="text-2xl md:text-3xl font-black font-title text-emerald-600 dark:text-emerald-450">${formatFCFA(p.price)}</p>
+                            <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1">Soit environ ${convertToEUR(p.price)} • Honoraires agence inclus</p>
+                        </div>
+                    </div>
+
+                    <!-- Specs -->
+                    <div class="grid grid-cols-3 gap-4 bg-slate-50 dark:bg-slate-950/60 p-4 rounded-2xl border border-slate-100 dark:border-slate-850/80 text-center text-slate-700 dark:text-slate-300 text-xs mb-6">
+                        <div><p class="text-slate-450 dark:text-slate-500 text-[9px] uppercase font-bold tracking-wider">Chambres</p><p class="text-base font-bold text-slate-800 dark:text-white mt-0.5">${p.beds || '-'}</p></div>
+                        <div><p class="text-slate-450 dark:text-slate-500 text-[9px] uppercase font-bold tracking-wider">Bains</p><p class="text-base font-bold text-slate-800 dark:text-white mt-0.5">${p.baths || '-'}</p></div>
+                        <div><p class="text-slate-450 dark:text-slate-500 text-[9px] uppercase font-bold tracking-wider">Surface</p><p class="text-base font-bold text-slate-800 dark:text-white mt-0.5">${p.size} m²</p></div>
+                    </div>
+
+                    <!-- Description -->
+                    <h4 class="font-title font-bold text-slate-900 dark:text-white text-base mb-2 flex items-center">
+                        <i data-lucide="info" class="h-4.5 w-4.5 mr-2 text-amber-600 dark:text-amber-400"></i> Description du bien
+                    </h4>
+                    <p class="text-slate-655 dark:text-slate-300 text-xs leading-relaxed mb-6 font-light whitespace-pre-line">${p.desc}</p>
+
+                    <!-- Features -->
+                    ${featsHTML ? `
+                        <h4 class="font-title font-bold text-slate-900 dark:text-white text-base mb-3">Équipements & Garanties</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">${featsHTML}</div>
+                    ` : ''}
+
+                    <hr class="border-slate-100 dark:border-slate-855 mb-6">
+
+                    <!-- Actions Form & WhatsApp -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                        
+                        <!-- Messaging details -->
+                        <div>
+                            <h4 class="font-title font-bold text-slate-900 dark:text-white text-base mb-3 flex items-center">
+                                <i data-lucide="message-square" class="h-4.5 w-4.5 mr-2 text-amber-600 dark:text-amber-400"></i> Échange Instantané
+                            </h4>
+                            <p class="text-slate-500 dark:text-slate-400 text-xs mb-4 leading-relaxed">Nos courtiers répondent en moins de 15 minutes sur WhatsApp. Disponible 7j/7.</p>
+                            
+                            <div class="flex flex-col gap-2">
+                                <a href="${getWhatsAppLink('+22997000000', msgWA)}" target="_blank"
+                                    class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl transition text-xs shadow-md flex items-center justify-center space-x-2">
+                                    <i data-lucide="phone" class="h-4.5 w-4.5"></i>
+                                    <span>Contacter un Conseiller par WhatsApp</span>
+                                </a>
+
+                                <button onclick="sharePropertyOnWhatsApp(null, '${p.id}')"
+                                    class="w-full bg-amber-600/10 hover:bg-amber-600/20 text-amber-700 dark:text-amber-400 font-bold py-3.5 rounded-xl transition text-xs border border-amber-500/25 flex items-center justify-center space-x-2">
+                                    <i data-lucide="share-2" class="h-4.5 w-4.5"></i>
+                                    <span>Partager cette Annonce</span>
+                                </button>
+
+                                <button onclick="window.print()"
+                                    class="w-full bg-slate-100 hover:bg-slate-200 dark:bg-[#0E1524] dark:hover:bg-slate-900 text-slate-700 dark:text-slate-200 font-bold py-3.5 rounded-xl transition text-xs border border-slate-200 dark:border-slate-800 flex items-center justify-center space-x-2">
+                                    <i data-lucide="printer" class="h-4.5 w-4.5"></i>
+                                    <span>Télécharger / Imprimer la Fiche PDF</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Inquiry client form -->
+                        <div class="bg-slate-50 dark:bg-slate-950/40 border border-slate-100 dark:border-slate-850 p-5 rounded-2xl">
+                            <h4 class="font-title font-bold text-slate-800 dark:text-white text-xs uppercase tracking-wider mb-3">Demander une visite</h4>
+                            <form onsubmit="handleContactSubmit(event, '${p.id}', '${p.title}')" class="space-y-3">
+                                <input type="text" id="contact-name" placeholder="Votre nom" required 
+                                    class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-855 p-2.5 rounded-lg text-xs text-slate-800 dark:text-white placeholder-slate-400 focus:outline-none focus:border-amber-500">
+                                <input type="tel" id="contact-phone" placeholder="Numéro (ex: +22997...)" required 
+                                    class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-855 p-2.5 rounded-lg text-xs text-slate-800 dark:text-white placeholder-slate-400 focus:outline-none focus:border-amber-500">
+                                <textarea id="contact-msg" rows="2" placeholder="Je souhaite être recontacté..." required
+                                    class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-855 p-2.5 rounded-lg text-xs text-slate-800 dark:text-white placeholder-slate-400 focus:outline-none focus:border-amber-500"></textarea>
+                                <button type="submit" class="w-full bg-slate-900 dark:bg-amber-500 hover:bg-slate-850 dark:hover:bg-amber-400 text-white dark:text-slate-950 font-bold py-2 rounded-lg transition text-xs shadow-sm">
+                                    Envoyer la demande
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Print-only Brand Footer -->
+                    <div class="hidden print:block border-t border-slate-350 pt-6 mt-8 text-center text-[10px] text-slate-500">
+                        <p class="font-bold text-slate-800">BÉNIN PRESTIGE IMMOBILIER</p>
+                        <p>Cotonou, Bénin • Tél/WhatsApp: +229 97 00 00 00 • www.beninprestigeimmobilier.bj</p>
+                        <p class="text-[8px] mt-1 text-slate-450">Fiche commerciale générée automatiquement. Informations non contractuelles.</p>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.firstElementChild.classList.remove('scale-95');
+            }, 10);
+
+            lucide.createIcons();
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modal.firstElementChild.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // SUBMIT CONTACT FORM
+        function handleContactSubmit(e, propertyId, propertyTitle) {
+            e.preventDefault();
+            
+            const name = document.getElementById('contact-name').value;
+            const phone = document.getElementById('contact-phone').value;
+            const message = document.getElementById('contact-msg').value;
+            
+            const newLead = {
+                id: Date.now(),
+                name: name,
+                email: "",
+                phone: phone,
+                interest: propertyTitle,
+                message: message,
+                date: new Date().toLocaleDateString('fr-FR')
+            };
+
+            leads.push(newLead);
+            localStorage.setItem('immo-benin-leads', JSON.stringify(leads));
+            
+            showToast("✨ Votre demande a été reçue ! Un conseiller vous recontactera.");
+            closeModal();
+            
+            if (isAgent) renderAgentDashboard();
+        }
+
+        // FAVORITES SYSTEM
+        function toggleFavorite(event, id) {
+            event.stopPropagation();
+            if (favorites.some(favId => String(favId) === String(id))) {
+                favorites = favorites.filter(favId => String(favId) !== String(id));
+                showToast("Bien retiré de vos favoris.", "warning");
+            } else {
+                favorites.push(id);
+                showToast("Bien ajouté à vos favoris !", "success");
+            }
+            localStorage.setItem('immo-benin-favs', JSON.stringify(favorites));
+            updateFavBadge();
+            filterProperties();
+            
+            const favsTab = document.getElementById('tab-favorites');
+            if (favsTab && !favsTab.classList.contains('hidden')) {
+                renderFavorites();
+            }
+        }
+
+        function updateFavBadge() {
+            const badge = document.getElementById('fav-badge');
+            const mobBadge = document.getElementById('mob-fav-badge');
+            const len = favorites.length;
+            if (len > 0) {
+                if (badge) {
+                    badge.textContent = len;
+                    badge.classList.remove('hidden');
+                }
+                if (mobBadge) {
+                    mobBadge.textContent = len;
+                    mobBadge.classList.remove('hidden');
+                }
+            } else {
+                if (badge) badge.classList.add('hidden');
+                if (mobBadge) mobBadge.classList.add('hidden');
+            }
+        }
+
+        function renderFavorites() {
+            const favGrid = document.getElementById('favorites-grid');
+            const noFavs = document.getElementById('no-favorites');
+            
+            const favList = properties.filter(p => favorites.includes(p.id));
+            
+            if (favList.length === 0) {
+                favGrid.innerHTML = '';
+                noFavs.classList.remove('hidden');
+            } else {
+                noFavs.classList.add('hidden');
+                renderPropertiesList(favList, favGrid);
+            }
+        }
+
+        // BANK MORTGAGE ESTIMATION
+        function calculateMortgage() {
+            const price = parseInt(document.getElementById('calc-price').value);
+            const apport = parseInt(document.getElementById('calc-apport').value);
+            const years = parseInt(document.getElementById('calc-duration').value);
+            const rate = parseFloat(document.getElementById('calc-rate').value);
+
+            document.getElementById('calc-val-price').textContent = formatFCFA(price);
+            document.getElementById('calc-val-apport').textContent = formatFCFA(apport);
+            document.getElementById('calc-val-duration').textContent = `${years} Ans`;
+            document.getElementById('calc-val-rate').textContent = `${rate} %`;
+
+            const principal = price - apport;
+            if (principal <= 0) {
+                document.getElementById('calc-result').textContent = "0 FCFA";
+                return;
+            }
+
+            const monthlyRate = (rate / 100) / 12;
+            const totalPayments = years * 12;
+
+            const monthlyPayment = (principal * monthlyRate * Math.pow(1 + monthlyRate, totalPayments)) / (Math.pow(1 + monthlyRate, totalPayments) - 1);
+            
+            if (isNaN(monthlyPayment) || !isFinite(monthlyPayment)) {
+                document.getElementById('calc-result').textContent = "Calcul impossible";
+            } else {
+                document.getElementById('calc-result').textContent = formatFCFA(Math.round(monthlyPayment)) + " / mois";
+            }
+        }
+
+        // LIGHT / DARK MODE TOGGLE
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('immo-theme', 'light');
+                icon.setAttribute('data-lucide', 'moon');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('immo-theme', 'dark');
+                icon.setAttribute('data-lucide', 'sun');
+            }
+            lucide.createIcons();
+        }
+
+        // PORTAL AGENT AUTHENTICATION
+        function openAgentAuth() {
+            if (isAgent) {
+                navigateTab('agent');
+            } else {
+                document.getElementById('agent-auth-modal').classList.remove('hidden');
+                document.getElementById('agent-pin').focus();
+            }
+        }
+
+        function closeAgentAuth() {
+            document.getElementById('agent-auth-modal').classList.add('hidden');
+            document.getElementById('agent-pin').value = '';
+        }
+
+        function submitAgentAuth(e) {
+            e.preventDefault();
+            const pin = document.getElementById('agent-pin').value;
+            
+            if (pin === '229') {
+                isAgent = true;
+                sessionStorage.setItem('immo-benin-auth', 'true');
+                closeAgentAuth();
+                showToast("Authentification réussie ! Console Agent ouverte.");
+                navigateTab('agent');
+            } else {
+                showToast("Code d'accès incorrect. Réessayez.", "warning");
+                document.getElementById('agent-pin').value = '';
+            }
+        }
+
+        function logoutAgent() {
+            isAgent = false;
+            sessionStorage.removeItem('immo-benin-auth');
+            showToast("Déconnexion effectuée avec succès.");
+            navigateTab('explore');
+        }
+
+        // AGENT DASHBOARD: MANAGEMENT TABLE RENDER
+        function renderAgentDashboard() {
+            document.getElementById('agent-stat-total').textContent = properties.length;
+            
+            const totalValue = properties.reduce((acc, curr) => acc + curr.price, 0);
+            document.getElementById('agent-stat-value').textContent = formatFCFA(totalValue);
+            document.getElementById('agent-stat-leads').textContent = leads.length;
+
+            // Leads
+            const leadsTable = document.getElementById('agent-leads-table');
+            const noLeadsMsg = document.getElementById('no-leads-msg');
+            leadsTable.innerHTML = '';
+            
+            if (leads.length === 0) {
+                noLeadsMsg.classList.remove('hidden');
+            } else {
+                noLeadsMsg.classList.add('hidden');
+                leads.forEach(lead => {
+                    const row = document.createElement('tr');
+                    row.className = "border-b border-slate-100 dark:border-slate-855 hover:bg-slate-50 dark:hover:bg-slate-900/20 text-xs text-slate-600 dark:text-slate-300";
+                    
+                    const msgWA = `Bonjour ${lead.name}, nous avons bien reçu votre demande concernant "${lead.interest}". Seriez-vous disponible pour en discuter ?`;
+                    
+                    row.innerHTML = `
+                        <td class="py-4 px-4">
+                            <p class="font-bold text-slate-900 dark:text-white">${lead.name}</p>
+                            <p class="text-[10px] text-slate-450 dark:text-slate-500">${lead.phone}</p>
+                        </td>
+                        <td class="py-4 px-4 font-semibold text-slate-550 dark:text-slate-400">${lead.interest}</td>
+                        <td class="py-4 px-4 max-w-xs truncate" title="${lead.message}">${lead.message}</td>
+                        <td class="py-4 px-4 text-right flex justify-end space-x-2 items-center">
+                            <a href="${getWhatsAppLink(lead.phone, msgWA)}" target="_blank" class="bg-emerald-600/10 border border-emerald-500/20 hover:bg-emerald-600 text-emerald-650 dark:text-emerald-400 hover:text-white p-2 rounded-xl transition" title="WhatsApp Direct">
+                                <i data-lucide="phone" class="h-4 w-4"></i>
+                            </a>
+                            <button type="button" onclick="deleteLead('${lead.id}')" class="bg-red-500/10 border border-red-500/20 hover:bg-red-500 text-red-655 dark:text-red-400 hover:text-white p-2 rounded-xl transition" title="Supprimer">
+                                <i data-lucide="trash-2" class="h-4 w-4"></i>
+                            </button>
+                        </td>
+                    `;
+                    leadsTable.appendChild(row);
+                });
+            }
+
+            // Properties
+            const propsTable = document.getElementById('agent-properties-table');
+            propsTable.innerHTML = '';
+            
+            properties.forEach(p => {
+                const row = document.createElement('tr');
+                row.className = "border-b border-slate-100 dark:border-slate-855 hover:bg-slate-50 dark:hover:bg-slate-900/20 text-xs text-slate-655 dark:text-slate-305";
+                
+                row.innerHTML = `
+                    <td class="py-4 px-4 flex items-center space-x-3">
+                        <img src="${p.img}" class="h-10 w-14 object-cover rounded-lg bg-slate-200">
+                        <span class="font-bold text-slate-850 dark:text-white truncate max-w-[150px]" title="${p.title}">${p.title}</span>
+                    </td>
+                    <td class="py-4 px-4 font-semibold text-slate-450 dark:text-slate-400">${p.district}, ${p.city}</td>
+                    <td class="py-4 px-4 text-emerald-600 dark:text-emerald-450 font-bold">${formatFCFA(p.price)}</td>
+                    <td class="py-4 px-4 text-right">
+                        <button type="button" onclick="deleteProperty('${p.id}')" class="bg-red-500/10 border border-red-500/20 hover:bg-red-500 text-red-655 dark:text-red-400 hover:text-white p-2 rounded-xl transition">
+                            <i data-lucide="trash-2" class="h-4 w-4"></i>
+                        </button>
+                    </td>
+                `;
+                propsTable.appendChild(row);
+            });
+
+            lucide.createIcons();
+        }
+
+        // ------------------ QUICK FILTERS SYNC ------------------
+        function syncHeroFilters(type) {
+            if (type === 'tf') {
+                document.getElementById('feat-tf').checked = document.getElementById('hero-opt-tf').checked;
+            } else if (type === 'piscine') {
+                document.getElementById('feat-piscine').checked = document.getElementById('hero-opt-piscine').checked;
+            } else if (type === 'mer') {
+                document.getElementById('feat-mer').checked = document.getElementById('hero-opt-mer').checked;
+            }
+            filterProperties();
+        }
+
+        // ------------------ PROPERTY ESTIMATION ENGINE ------------------
+        function updateEstFields() {
+            const typeInput = document.querySelector('input[name="est-type"]:checked').value;
+            const sizeLabel = document.getElementById('est-size-label');
+            const sizeInput = document.getElementById('est-size');
+            const offerSelect = document.getElementById('est-offer');
+            
+            if (typeInput === 'terrain') {
+                offerSelect.value = 'achat';
+                offerSelect.options[1].disabled = true;
+                sizeLabel.textContent = "Superficie (m²)";
+                if (sizeInput.value === "0" || sizeInput.value === "3" || sizeInput.value === "4" || sizeInput.value === "200") {
+                    sizeInput.value = "300";
+                }
+            } else {
+                offerSelect.options[1].disabled = false;
+                if (typeInput === 'appartement') {
+                    sizeLabel.textContent = "Nombre de pièces principales";
+                    sizeInput.value = "3";
+                } else {
+                    sizeLabel.textContent = "Superficie habitable (m²)";
+                    sizeInput.value = "200";
+                }
+            }
+        }
+
+        let calculatedEstMessage = "";
+
+        function calculateEstimation(e) {
+            e.preventDefault();
+            const type = document.querySelector('input[name="est-type"]:checked').value;
+            const offer = document.getElementById('est-offer').value;
+            const zone = document.getElementById('est-zone').value;
+            const size = parseFloat(document.getElementById('est-size').value);
+            
+            const tf = document.getElementById('est-opt-tf').checked;
+            const piscine = document.getElementById('est-opt-piscine').checked;
+            const route = document.getElementById('est-opt-route').checked;
+            const securite = document.getElementById('est-opt-securite').checked;
+
+            let basePrice = 0;
+            let zoneCoeff = 1.0;
+
+            const zoneCoeffs = {
+                haie_vive: 2.6,
+                fidjrosse: 2.1,
+                cadjehoun: 2.3,
+                akpakpa: 1.5,
+                arconville: 1.2,
+                kpota: 0.9,
+                ouidah: 1.3,
+                porto_novo: 0.85
+            };
+            zoneCoeff = zoneCoeffs[zone] || 1.0;
+
+            if (offer === 'achat') {
+                if (type === 'villa') {
+                    basePrice = 450000 * size;
+                } else if (type === 'appartement') {
+                    basePrice = 18000000 * size;
+                } else if (type === 'terrain') {
+                    basePrice = 90000 * size;
+                }
+            } else {
+                if (type === 'villa') {
+                    basePrice = 2800 * size;
+                } else if (type === 'appartement') {
+                    basePrice = 90000 * size;
+                }
+            }
+
+            let estimatedValue = basePrice * zoneCoeff;
+
+            let multiplier = 1.0;
+            if (tf) multiplier += (type === 'terrain') ? 0.35 : 0.15;
+            if (piscine && type !== 'terrain') multiplier += 0.25;
+            if (route) multiplier += 0.12;
+            if (securite) multiplier += 0.08;
+
+            estimatedValue = estimatedValue * multiplier;
+
+            const minEst = Math.round((estimatedValue * 0.9) / 10000) * 10000;
+            const maxEst = Math.round((estimatedValue * 1.1) / 10000) * 10000;
+
+            const resultContainer = document.getElementById('est-result-container');
+            const resultPrice = document.getElementById('est-result-price');
+            
+            let unit = "";
+            if (currentCurrency === 'EUR') {
+                unit = offer === 'location' ? " € / mois" : " €";
+            } else if (currentCurrency === 'USD') {
+                unit = offer === 'location' ? " $ / mois" : " $";
+            } else {
+                unit = offer === 'location' ? " FCFA / mois" : " FCFA";
+            }
+            resultPrice.textContent = `${formatFCFANoSymbol(minEst)} - ${formatFCFANoSymbol(maxEst)}${unit}`;
+            
+            resultContainer.classList.remove('hidden');
+
+            const zoneName = document.getElementById('est-zone').options[document.getElementById('est-zone').selectedIndex].text;
+            const typeName = type === 'villa' ? 'Villa/Duplex' : type === 'appartement' ? 'Appartement' : 'Terrain';
+            const offerName = offer === 'achat' ? 'de Vente' : 'de Loyer';
+            calculatedEstMessage = `Bonjour Bénin Prestige Immobilier, je souhaite faire expertiser ma propriété. D'après votre simulateur de prestige, mon bien (${typeName} à ${zoneName}, superficie/pièces: ${size}) a une valeur estimative ${offerName} entre ${formatFCFANoSymbol(minEst)} et ${formatFCFANoSymbol(maxEst)}${unit}.`;
+
+            setTimeout(() => {
+                resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+        }
+
+        function formatFCFANoSymbol(val) {
+            if (currentCurrency === 'EUR') {
+                return new Intl.NumberFormat('fr-FR').format(Math.round(val / 655.957));
+            } else if (currentCurrency === 'USD') {
+                return new Intl.NumberFormat('fr-FR').format(Math.round(val / 600));
+            } else {
+                return new Intl.NumberFormat('fr-FR').format(val);
+            }
+        }
+
+        function contactAgentForEstimation() {
+            if (calculatedEstMessage) {
+                const url = `https://wa.me/22997000000?text=${encodeURIComponent(calculatedEstMessage)}`;
+                window.open(url, '_blank');
+            }
+        }
+
+        // ------------------ EXPORT LEADS CSV ------------------
+        function exportLeadsCSV() {
+            if (leads.length === 0) {
+                showToast("Aucun prospect disponible pour l'export.", "error");
+                return;
+            }
+
+            let csvContent = "data:text/csv;charset=utf-8,";
+            csvContent += "ID,Nom Client,Telephone,Interet,Message,Date\r\n";
+
+            leads.forEach(l => {
+                const row = [
+                    l.id,
+                    `"${l.name.replace(/"/g, '""')}"`,
+                    `"${l.phone}"`,
+                    `"${l.interest.replace(/"/g, '""')}"`,
+                    `"${l.message.replace(/"/g, '""')}"`,
+                    `"${new Date().toLocaleDateString('fr-FR')}"`
+                ].join(",");
+                csvContent += row + "\r\n";
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", `prospects_prestige_benin_${new Date().toISOString().slice(0,10)}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            showToast("Le fichier CSV a été téléchargé.", "success");
+        }
+
+
+
+        // CREATE NEW LISTING
+        function handleNewProperty(e) {
+            e.preventDefault();
+            
+            const title = document.getElementById('add-title').value;
+            const type = document.getElementById('add-type').value;
+            const offer = document.getElementById('add-offer').value;
+            const city = document.getElementById('add-city').value;
+            const district = document.getElementById('add-district').value;
+            const price = parseInt(document.getElementById('add-price').value);
+            const size = parseInt(document.getElementById('add-size').value);
+            const beds = parseInt(document.getElementById('add-beds').value);
+            const baths = parseInt(document.getElementById('add-baths').value);
+            const desc = document.getElementById('add-desc').value;
+            
+            let img = document.getElementById('add-img').value;
+            if (!img) {
+                if (type === 'terrain') {
+                    img = "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80";
+                } else if (type === 'bureau') {
+                    img = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80";
+                } else {
+                    img = "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80";
+                }
+            }
+
+            const newFeatures = [];
+            if (document.getElementById('add-feat-tf').checked) newFeatures.push('tf');
+            if (document.getElementById('add-feat-piscine').checked) newFeatures.push('piscine');
+            if (document.getElementById('add-feat-groupe').checked) newFeatures.push('groupe');
+            if (document.getElementById('add-feat-mer').checked) newFeatures.push('mer');
+
+            const newProp = {
+                id: Date.now(),
+                title: title,
+                type: type,
+                offer: offer,
+                price: price,
+                city: city,
+                district: district,
+                beds: beds,
+                baths: baths,
+                size: size,
+                img: img,
+                images: [img], // Default gallery
+                desc: desc,
+                features: newFeatures,
+                agent: "Console Prestige Agent"
+            };
+
+            properties.unshift(newProp);
+            localStorage.setItem('immo-benin-properties', JSON.stringify(properties));
+            
+            showToast("✨ Annonce publiée avec succès !");
+            
+            // Reset
+            document.getElementById('add-title').value = '';
+            document.getElementById('add-price').value = '';
+            document.getElementById('add-size').value = '';
+            document.getElementById('add-beds').value = '0';
+            document.getElementById('add-baths').value = '0';
+            document.getElementById('add-desc').value = '';
+            document.getElementById('add-img').value = '';
+            document.getElementById('add-feat-tf').checked = false;
+            document.getElementById('add-feat-piscine').checked = false;
+            document.getElementById('add-feat-groupe').checked = false;
+            document.getElementById('add-feat-mer').checked = false;
+
+            filterProperties();
+            renderAgentDashboard();
+        }
+
+        // CUSTOM CONFIRMATION SYSTEM
+        let confirmPromiseResolve = null;
+
+        function showCustomConfirm(title, message) {
+            document.getElementById('confirm-title').textContent = title;
+            document.getElementById('confirm-message').textContent = message;
+            
+            const modal = document.getElementById('confirm-modal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.firstElementChild.classList.remove('scale-95');
+            }, 10);
+            
+            lucide.createIcons();
+
+            return new Promise((resolve) => {
+                confirmPromiseResolve = resolve;
+            });
+        }
+
+        function closeCustomConfirm(result) {
+            const modal = document.getElementById('confirm-modal');
+            modal.classList.add('opacity-0');
+            modal.firstElementChild.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+            
+            if (confirmPromiseResolve) {
+                confirmPromiseResolve(result);
+                confirmPromiseResolve = null;
+            }
+        }
+
+        document.getElementById('confirm-cancel-btn').addEventListener('click', () => closeCustomConfirm(false));
+        document.getElementById('confirm-ok-btn').addEventListener('click', () => closeCustomConfirm(true));
+
+        // DELETIONS
+        async function deleteProperty(id) {
+            const confirmed = await showCustomConfirm(
+                "Supprimer l'annonce ?",
+                "Voulez-vous vraiment supprimer définitivement cette annonce ? Cette action est irréversible."
+            );
+            if (confirmed) {
+                properties = properties.filter(p => String(p.id) !== String(id));
+                localStorage.setItem('immo-benin-properties', JSON.stringify(properties));
+                
+                favorites = favorites.filter(favId => String(favId) !== String(id));
+                localStorage.setItem('immo-benin-favs', JSON.stringify(favorites));
+                updateFavBadge();
+
+                showToast("Annonce supprimée définitivement.", "warning");
+                filterProperties();
+                renderAgentDashboard();
+            }
+        }
+
+        async function deleteLead(id) {
+            const confirmed = await showCustomConfirm(
+                "Supprimer la demande ?",
+                "Voulez-vous vraiment supprimer cette demande prospect ?"
+            );
+            if (confirmed) {
+                leads = leads.filter(l => String(l.id) !== String(id));
+                localStorage.setItem('immo-benin-leads', JSON.stringify(leads));
+                
+                showToast("Demande supprimée.", "warning");
+                renderAgentDashboard();
+            }
+        }
+    </script>
+</body>
+
+</html>
